@@ -1,8 +1,8 @@
-# USSD4ETECSA
+# USSD4NOOBS
 
- Esta aplicación para la visualizazión de códigos USSD de ETECSA.
+ Esta aplicación para la consulta de saldos.
 
-![USSD4ETECSA](https://gitlab.com/Daym3l/USSD4NOOBS/blob/master/sample_img/sample.png)
+![USSD4NOOBS](https://gitlab.com/Daym3l/USSD4NOOBS/blob/master/sample_img/sample.png)
 
 ## Funcionalidades
 
