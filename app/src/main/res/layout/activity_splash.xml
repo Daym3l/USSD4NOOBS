@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context="dev.mad.ussd4etecsa.splash.Splash">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="113dp"
+        android:layout_height="37dp"
+        android:layout_above="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/logo_tbmos"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/desarrollado_por"
+        android:textAllCaps="true"
+        android:textColor="@color/primary_text"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/about_us_copy"
+        android:textColor="@color/primary_text"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/iv_logoprincipal"
+        android:layout_width="137dp"
+        android:layout_height="218dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="145dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_splash" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_logoprincipal"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/primary_text"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

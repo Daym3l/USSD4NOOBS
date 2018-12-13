@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp">
+
+    <ImageView
+        android:id="@+id/iv_contact"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_account" />
+
+    <TextView
+        android:id="@+id/tv_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_contact"
+        android:layout_marginLeft="8dp"
+        android:layout_toEndOf="@+id/iv_contact"
+        android:layout_toRightOf="@+id/iv_contact"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Nombre"
+        android:textAllCaps="true"
+        android:textColor="@color/primary_text"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_numero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nombre"
+        android:layout_marginLeft="8dp"
+        android:layout_toEndOf="@+id/iv_contact"
+        android:layout_toRightOf="@+id/iv_contact"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Telf"
+        android:textColor="@color/secondary_text"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingBottom="2dp"
+        android:text="fecha"
+        android:textSize="12sp"
+        android:layout_below="@+id/tv_numero"
+        android:layout_alignLeft="@+id/tv_numero"
+        android:layout_alignStart="@+id/tv_numero" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="$1"
+        android:textColor="@color/primary_text"
+        android:textSize="24sp" />
+
+</RelativeLayout>

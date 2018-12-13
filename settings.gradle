@@ -1,0 +1,2 @@
+include ':app', ':MaterialDialogs'
+project(':MaterialDialogs').projectDir = new File('app/libs/MaterialDialogs')

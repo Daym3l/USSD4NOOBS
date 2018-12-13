@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="dev.mad.ussd4etecsa.Nav_Principal">
+    <item
+        android:id="@+id/action_help"
+        android:orderInCategory="100"
+        android:title="Ayuda y Soporte"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_config"
+        android:icon="@drawable/ic_settings"
+        android:orderInCategory="3"
+        android:title="@string/config"
+        app:showAsAction="ifRoom" />
+</menu>

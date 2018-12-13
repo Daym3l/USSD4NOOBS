@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">USSD4NOOBS</string>
+    <string name="accessibility_service_description">Habilitar <b>USSD4NOOBS</b> para poder obtener la infomación de los dialogos de saldo y asi poder mantener la Base de datos de la aplicación actulizada. Cuando habilites esta opción, podras obtener la vizualización de tus saldos en la barra de notificación, y así conocer la informacion de tu saldo, asi como los servicios contratados.
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="ok">Contratar</string>
+    <string name="update">Actualizar</string>
+    <string name="config">Configuración</string>
+    <string name="transferir">Transferir saldo</string>
+    <string name="amigos">Plan amigos</string>
+    <string name="inicio">Inicio</string>
+    <string name="about">Acerca de</string>
+    <string name="otros">Otros</string>
+
+    <string name="descripcion_notificacion">Activar acceso directo de los saldos en la barra notificación. </string>
+    <string name="descripcion_accesibilidad">Presione para habilitar el servicio de accesibilidad, el cual permite que se puedan mostrar los saldos en la aplicación. </string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="configure">Configurar Widget de la aplicación</string>
+    <string name="add_widget">Add widget</string>
+    <string name="config_Automata_title">Activar verificación automática</string>
+    <string name="config_Automata_text">Permite verificar automáticamente los saldos, 5 segundos después de: </string>
+    <string name="config_chbox_call">Realizar una llamada. </string>
+    <string name="config_chbox_sms">Enviar un mensaje. </string>
+    <string name="config_chbox_datos">Desconectar la red de datos. </string>
+
+    <string name="alert_dialog_hint">Introducir código de recarga..</string>
+    <string name="alert_dialog_title">Recargar saldo</string>
+
+    <string name="about_us_version">Versión</string>
+    <string name="about_us_reporte">Colaborar</string>
+    <string name="about_us_github_dir">https://gitlab.com/Daym3l/USSD4ETECSA</string>
+    <string name="about_us_contactenos">Contactenos</string>
+    <string name="about_us_mail">daymel537@gmail.com</string>
+    <string name="about_us_descrip">Agradecer a todas las personas que de una forma u otra han contribuido con el desarrollo de esta aplicación.</string>
+    <string name="about_us_allright">Todos los derechos reservados</string>
+    <string name="about_us_copy">Copyright © 2017 Daym3l.</string>
+
+    <string name="Principal_seleccionar">Debe seleccionar una opción.</string>
+    <string name="Principal_sms">Contratar servicio de Mensajes</string>
+    <string name="Principal_datos">Contratar servicio de Datos e Internet</string>
+    <string name="Principal_voz">Contratar servicio de Voz</string>
+    <string name="no_conection">sin conexión</string>
+    <string name="cubacel">Cubacel</string>
+    <string name="notification_chnnl_location">Location polling</string>
+    <string name="notification_chnnl_location_descr">You will see notifications on this channel ONLY during location polling</string>
+    <string name="Saldo">Su saldo actual es de:</string>
+    <string name="Saldo_vence">Vence el:</string>
+
+    <string name="servicio_dispone">Usted dispone de:</string>
+    <string name="servicio_vence">Por:</string>
+    <string name="no_service">Sin servicio</string>
+
+    <string name="hint_trans_contacto">Número de telf. a transferir</string>
+    <string name="hint_trans_money">1 CUC</string>
+    <string name="hint_trans_pass">Contraseña</string>
+    <string name="hint_trans_pass_val">1234</string>
+
+
+    <string name="title_activity_principal__navigation">USSD4NOOBS</string>
+    <string name="visitanos">Visitanos</string>
+    <string name="http_tbmos_cubava_cu">https://www.facebook.com/ussd4noobs</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="agregar_amigo">Nombre amigo</string>
+    <string name="activar_plan_de_amigos">Activar plan de amigos</string>
+    <string name="desactivar">Desactivar</string>
+    <string name="activar">Activar</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="by_daymel">by Daym3l</string>
+    <string name="desarrollado_por">Desarrollado por:</string>
+    <!--TUTORIAL-->
+    <string name="t_inicio">Opciones</string>
+    <string name="t_descripcion">Habilitar en las opciones el Servicio de Accesibilidad para que la aplicación pueda funcionar correctamente.</string>
+    <string name="t_btn_continuar">Continuar</string>
+    <string name="t_btn_terminar">Terminar</string>
+    <string name="t_saldo">Saldo</string>
+    <string name="t_saldo_descripcion">Consulte su saldo al presionar el botón.</string>
+    <string name="t_planes_descripcion">Actualizar y contratar planes.</string>
+    <string name="t_planes">Planes</string>
+    <string name="t_planes_update">También puede actualizar dando un toque a la imagen.</string>
+    <string name="ayuda">Ayuda</string>
+
+
+</resources>

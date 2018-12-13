@@ -1,0 +1,175 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dev.mad.ussd4etecsa.transferencia.TransferenciaFragment">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/main.appbar"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/primary"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/main.collapsing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary">
+
+
+                    <EditText
+                        android:id="@+id/et_numtelf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:ems="10"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="@string/hint_trans_contacto"
+                        android:inputType="phone"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/btn_transferir_contacto"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/btn_transferir_contacto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:clickable="true"
+                        app:backgroundTint="@android:color/holo_blue_dark"
+                        app:elevation="10dp"
+                        app:fabSize="mini"
+                        app:layout_constraintBottom_toTopOf="@+id/btn_cambiar_contraseña"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_account_btn" />
+
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/btn_cambiar_contraseña"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="8dp"
+                        android:clickable="true"
+                        app:backgroundTint="@android:color/holo_blue_dark"
+                        app:elevation="10dp"
+                        app:fabSize="mini"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_lock" />
+
+                    <EditText
+                        android:id="@+id/et_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="7dp"
+                        android:ems="10"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="@string/hint_trans_money"
+                        android:inputType="text|number"
+                        android:maxLength="3"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/et_contrasenna_input" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/et_contrasenna_input"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/btn_cambiar_contraseña"
+                        app:layout_constraintTop_toBottomOf="@+id/et_numtelf"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="@color/icons">
+
+                        <EditText
+
+                            android:id="@+id/et_contrasenna"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:fontFamily="sans-serif-condensed"
+                            android:hint="@string/hint_trans_pass"
+                            android:inputType="numberPassword"
+                            android:maxLength="4"
+                            android:text="@string/hint_trans_pass_val"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/btn_cambiar_contraseña"
+                            app:layout_constraintTop_toBottomOf="@+id/et_numtelf" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_transferencia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_tranfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:src="@drawable/ic_send"
+            app:backgroundTint="@android:color/holo_blue_dark"
+            app:elevation="5dp"
+            app:fabSize="normal"
+            app:layout_anchor="@id/main.appbar"
+            app:layout_anchorGravity="bottom|right|end"
+            app:rippleColor="@color/cardview_light_background" />
+    </android.support.design.widget.CoordinatorLayout>
+
+</FrameLayout>

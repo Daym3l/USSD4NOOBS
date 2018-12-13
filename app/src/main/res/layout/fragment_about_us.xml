@@ -1,0 +1,365 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_background"
+    tools:context="dev.mad.ussd4etecsa.aboutUS.AboutUsFragment">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/main.appbar"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:fitsSystemWindows="true">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/main.collapsing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:expandedTitleMarginStart="48dp"
+                app:expandedTitleMarginEnd="64dp">
+                <LinearLayout
+                    android:id="@+id/cl_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_logo"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/iv_about_us"
+                        app:srcCompat="@mipmap/ic_launcher"
+                        tools:layout_constraintLeft_creator="1"
+                        tools:layout_constraintRight_creator="1"
+                        tools:layout_constraintTop_creator="1" />
+
+                    <TextView
+                        android:id="@+id/tv_version"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+
+
+
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/about_us_version"
+                        android:textAlignment="center"
+                        android:textColor="@color/icons"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintHorizontal_bias="0.46"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+
+                    <TextView
+                        android:id="@+id/tv_version_val"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="1.0"
+                        android:textAlignment="center"
+                        android:textColor="@color/icons"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_about_us"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_version"
+                        app:layout_constraintTop_toTopOf="@+id/tv_version"
+                        app:layout_constraintVertical_bias="0.0" />
+
+
+                </LinearLayout>
+
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+           </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/card_background">
+
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/ll_colaborar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:id="@+id/iv_github"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginTop="8dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/ic_github_logo" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_report_bug"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="@string/about_us_reporte"
+                                    android:textColor="@color/primary_text" />
+
+                                <TextView
+                                    android:id="@+id/bug"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="@string/about_us_github_dir"
+
+                                    android:textColor="@color/secondary_text" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/ll_mail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:id="@+id/iv_text_us"
+                                android:layout_width="42dp"
+                                android:layout_height="42dp"
+                                android:layout_alignLeft="@+id/iv_github"
+                                android:layout_alignStart="@+id/iv_github"
+                                android:layout_below="@+id/iv_github"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginTop="8dp"
+                                app:srcCompat="@drawable/ic_account" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_contactenos"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="@string/about_us_contactenos"
+                                    android:textColor="@color/primary_text" />
+
+                                <TextView
+                                    android:id="@+id/tv_mail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginRight="8dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="@string/about_us_mail" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/ll_face"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:id="@+id/iv_face"
+                                android:layout_width="38dp"
+                                android:layout_height="38dp"
+
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginTop="8dp"
+                                app:srcCompat="@drawable/ic_facebok" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_visitanos"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="@string/visitanos"
+                                    android:textColor="@color/primary_text" />
+
+                                <TextView
+                                    android:id="@+id/tv_fb_link"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:text="@string/http_tbmos_cubava_cu" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="100dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_descrip"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/tv_logo"
+                                android:layout_alignLeft="@+id/tv_right"
+                                android:layout_alignStart="@+id/tv_right"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginStart="8dp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="@string/about_us_descrip"
+                                android:textAlignment="center"
+                                android:textColor="@color/secondary_text" />
+
+                            <ImageView
+                                android:id="@+id/tv_logo"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_above="@+id/tv_right"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="8dp"
+                                app:srcCompat="@drawable/logo_tbmos" />
+
+                            <TextView
+                                android:id="@+id/tv_derechos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="@string/about_us_copy"
+                                android:textAlignment="center"
+                                android:textColor="@color/secondary_text"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_right"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/tv_derechos"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="2dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="@string/about_us_allright"
+                                android:textAlignment="center"
+                                android:textColor="@color/primary_text" />
+
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btn_donar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_like"
+            app:backgroundTint="@color/colorPrimary"
+            app:elevation="5dp"
+            app:fabSize="normal"
+            app:layout_anchor="@id/main.appbar"
+            app:layout_anchorGravity="bottom|right|end" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</FrameLayout>

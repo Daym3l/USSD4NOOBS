@@ -1,0 +1,94 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_background"
+    tools:context="dev.mad.ussd4etecsa.amigos.AmigosFrafment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/separator"
+            android:orientation="vertical">
+
+            <Switch
+                android:id="@+id/sw_amigos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+
+                android:fontFamily="sans-serif-condensed"
+                android:switchMinWidth="10dp"
+                android:text="@string/activar_plan_de_amigos"
+                android:textOff="@string/desactivar"
+                android:textOn="@string/activar"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_listado"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1" />
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/menu_yellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+
+            fab:menu_animationDelayPerItem="0"
+            fab:menu_icon="@drawable/ic_more_vert"
+            fab:menu_labels_hideAnimation="@anim/jump_to_down"
+            fab:menu_labels_showAnimation="@anim/jump_from_down"
+            fab:menu_labels_style="@style/MenuLabelsStyle"
+            fab:menu_shadowColor="#444">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabadd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_person_add"
+
+                app:fab_label="Adicionar amigo"
+                fab:fab_colorNormal="@color/colorPrimaryli"
+                fab:fab_colorPressed="@color/colorPrimary"
+                fab:fab_colorRipple="@color/colorPrimarydark" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fabRefresch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_refresch"
+
+                app:fab_label="Refrecar listado de amigos"
+                fab:fab_colorNormal="@color/colorPrimaryli"
+                fab:fab_colorPressed="@color/colorPrimary"
+                fab:fab_colorRipple="@color/colorPrimarydark" />
+        </com.github.clans.fab.FloatingActionMenu>
+    </LinearLayout>
+
+
+</FrameLayout>

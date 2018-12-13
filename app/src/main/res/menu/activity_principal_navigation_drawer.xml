@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/inicio" />
+
+        <item
+            android:id="@+id/nav_transferir"
+            android:icon="@drawable/ic_tranferir"
+            android:title="@string/transferir" />
+        <item
+            android:id="@+id/nav_amigos"
+            android:icon="@drawable/ic_group"
+            android:title="@string/amigos" />
+        <item
+            android:id="@+id/nav_configuracion"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/config" />
+    </group>
+
+    <item android:title="@string/otros">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_info"
+                android:title="@string/about" />
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_help"
+                android:title="@string/ayuda" />
+
+        </menu>
+    </item>
+
+</menu>
