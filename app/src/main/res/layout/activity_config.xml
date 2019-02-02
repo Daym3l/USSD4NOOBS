@@ -2,7 +2,6 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/coordinatorConfig"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="dev.mad.ussd4etecsa.settings.ConfigActivity">
@@ -21,9 +20,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include
-        android:id="@+id/includeConfig"
-        layout="@layout/content_config" />
+    <include layout="@layout/content_config" />
 
 
 </android.support.design.widget.CoordinatorLayout>

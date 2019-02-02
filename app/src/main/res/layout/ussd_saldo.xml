@@ -6,7 +6,6 @@
     android:padding="8sp">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cv_widget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -21,7 +20,6 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/tv_w_saldo_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -34,7 +32,6 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tv_widget_saldo_des"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -70,21 +67,18 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView3"
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:layout_marginTop="0dp"
                             app:srcCompat="@drawable/png_voz" />
 
                         <ImageView
-                            android:id="@+id/imageView4"
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:layout_marginTop="1dp"
                             app:srcCompat="@drawable/png_sms" />
 
                         <ImageView
-                            android:id="@+id/imageView5"
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             app:srcCompat="@drawable/png_wifi" />
@@ -98,7 +92,6 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tv_widget_voz"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignLeft="@+id/tv_widget_sms"
@@ -124,7 +117,6 @@
                             android:textSize="18sp" />
 
                         <TextView
-                            android:id="@+id/tv_widget_bolsa"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"

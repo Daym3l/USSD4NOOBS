@@ -21,7 +21,6 @@
             android:fitsSystemWindows="true">
 
             <android.support.design.widget.CollapsingToolbarLayout
-                android:id="@+id/main.collapsing"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
@@ -30,7 +29,6 @@
                 app:expandedTitleMarginStart="48dp"
                 app:expandedTitleMarginEnd="64dp">
                 <LinearLayout
-                    android:id="@+id/cl_banner"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -116,13 +114,11 @@
 
 
                     <LinearLayout
-                        android:id="@+id/ll_contact"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <LinearLayout
-                            android:id="@+id/ll_colaborar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
@@ -146,7 +142,6 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/tv_report_bug"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
 
@@ -160,7 +155,6 @@
                                     android:textColor="@color/primary_text" />
 
                                 <TextView
-                                    android:id="@+id/bug"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginEnd="8dp"
@@ -176,7 +170,6 @@
 
                         </LinearLayout>
                         <LinearLayout
-                            android:id="@+id/ll_mail"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
@@ -201,7 +194,6 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/tv_contactenos"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
 
@@ -213,7 +205,6 @@
                                     android:textColor="@color/primary_text" />
 
                                 <TextView
-                                    android:id="@+id/tv_mail"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
 
@@ -224,7 +215,6 @@
                             </LinearLayout>
                         </LinearLayout>
                         <LinearLayout
-                            android:id="@+id/ll_face"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
@@ -232,7 +222,6 @@
                             android:paddingBottom="8dp">
 
                             <ImageView
-                                android:id="@+id/iv_face"
                                 android:layout_width="38dp"
                                 android:layout_height="38dp"
 
@@ -247,7 +236,6 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/tv_visitanos"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
 
@@ -259,7 +247,6 @@
                                     android:textColor="@color/primary_text" />
 
                                 <TextView
-                                    android:id="@+id/tv_fb_link"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="8dp"
@@ -271,7 +258,6 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/ll_right"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
@@ -352,7 +338,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
-            android:src="@drawable/ic_like"
+            android:src="@drawable/ic_money"
             app:backgroundTint="@color/colorPrimary"
             app:elevation="5dp"
             app:fabSize="normal"

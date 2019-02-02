@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimaryli">#1976d2</color>
-    <color name="colorPrimary">#1565c0</color>
+    <color name="colorPrimary">#1565C0</color>
     <color name="colorPrimarydark">#0d47a1</color>
 
-    <color name="rojo">#ff3003</color>
+    <color name="rojo">#FF3003</color>
     <color name="verde">#009933</color>
-    <color name="verdeclaro">#91dc5a</color>
     <color name="primary">#009688</color>
     <color name="primary_dark">#00796b</color>
     <color name="accent">#00796b</color>
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#757575</color>
+    <color name="separator">#7E757575</color>
     <color name="icons">#ffffff</color>
 
 </resources>

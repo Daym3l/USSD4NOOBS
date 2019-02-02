@@ -95,13 +95,10 @@ public class AmigosFrafment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    if (sharedPreferences.getBoolean("amigos", true)) {
-                        addFriend.setEnabled(true);
-                        refreshFriends.setEnabled(true);
-
-                    } else {
-                        Util.marcarNumero("133*4*1*1", getActivity());
-
+                    try {
+                        init();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
                     }
 
                 } else {
@@ -157,9 +154,15 @@ public class AmigosFrafment extends Fragment {
                 addFriend.setEnabled(true);
                 plan.setChecked(true);
             }
-
         } else {
-            Util.marcarNumero("133*4*3*1*1", getActivity());
+            if (plan.isChecked()) {
+                Util.marcarNumero("133*4*3*1*1", getActivity());
+            } else {
+                addFriend.setEnabled(false);
+                refreshFriends.setEnabled(false);
+            }
+
+
         }
 
 

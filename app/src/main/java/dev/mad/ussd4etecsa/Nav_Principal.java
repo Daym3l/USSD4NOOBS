@@ -61,6 +61,7 @@ import dev.mad.ussd4etecsa.transferencia.TransferenciaFragment;
 import dev.mad.ussd4etecsa.utiles.Constantes;
 import dev.mad.ussd4etecsa.utiles.Util;
 
+
 public class Nav_Principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -88,7 +89,7 @@ public class Nav_Principal extends AppCompatActivity
     TextView tv_activo_Voz;
     TextView tv_activo_Sms;
     TextView tv_activo_Bono;
-    CardView cv_bono, cv_saldo;
+    CardView cv_bono;
     EditText alertText;
     FragmentManager fragmentManager;
     CollapsingToolbarLayout collapsingToolbarLayout;
@@ -391,19 +392,18 @@ public class Nav_Principal extends AppCompatActivity
      * @param fragment
      */
     private void fragmentGestor(Fragment fragment, String tag) {
-
+        collapsingToolbarLayout.setVisibility(View.GONE);
         Fragment containerFragment = getSupportFragmentManager().findFragmentByTag(tag);
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         if (containerFragment == null) {
-            fragmentTransaction.add(R.id.rl_contenedor, fragment, tag);
+            fragmentTransaction.replace(R.id.cordinador, fragment, tag);
             fragmentTransaction.addToBackStack(tag);
             fragmentTransaction.commit();
-            collapsingToolbarLayout.setVisibility(View.GONE);
         } else if (!tag.equals(containerFragment.getTag()) || tag.equals(containerFragment.getTag())) {
-            fragmentTransaction.replace(R.id.rl_contenedor, fragment, tag);
+            fragmentTransaction.replace(R.id.cordinador, fragment, tag);
             fragmentTransaction.addToBackStack(tag);
             fragmentTransaction.commit();
-            collapsingToolbarLayout.setVisibility(View.GONE);
+
         }
 
     }
@@ -471,7 +471,7 @@ public class Nav_Principal extends AppCompatActivity
      * @param msg
      */
     private void mostrarMensaje(String msg) {
-        Snackbar.make(findViewById(R.id.rl_contenedor), msg, Snackbar.LENGTH_LONG)
+        Snackbar.make(findViewById(R.id.cordinador), msg, Snackbar.LENGTH_LONG)
                 .show();
     }
 

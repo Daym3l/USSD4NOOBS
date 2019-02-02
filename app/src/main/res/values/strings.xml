@@ -43,14 +43,12 @@
 
     <string name="Principal_seleccionar">Debe seleccionar una opción.</string>
     <string name="Principal_sms">Contratar servicio de Mensajes</string>
-    <string name="Principal_datos">Contratar servicio de Datos e Internet</string>
+    <string name="Principal_datos">Contratar servicio de Datos </string>
     <string name="Principal_voz">Contratar servicio de Voz</string>
     <string name="no_conection">sin conexión</string>
     <string name="cubacel">Cubacel</string>
-    <string name="notification_chnnl_location">Location polling</string>
-    <string name="notification_chnnl_location_descr">You will see notifications on this channel ONLY during location polling</string>
-    <string name="Saldo">Su saldo actual es de:</string>
-    <string name="Saldo_vence">Vence el:</string>
+    <string name="Saldo">Saldo actual:</string>
+    <string name="Saldo_vence">Vence:</string>
 
     <string name="servicio_dispone">Usted dispone de:</string>
     <string name="servicio_vence">Por:</string>
@@ -67,7 +65,6 @@
     <string name="http_tbmos_cubava_cu">https://www.facebook.com/ussd4noobs</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="agregar_amigo">Nombre amigo</string>
     <string name="activar_plan_de_amigos">Activar plan de amigos</string>
     <string name="desactivar">Desactivar</string>
@@ -86,6 +83,11 @@
     <string name="t_planes">Planes</string>
     <string name="t_planes_update">También puede actualizar dando un toque a la imagen.</string>
     <string name="ayuda">Ayuda</string>
+    <string name="saldo_default">$0.00</string>
+    <string name="sin_servicio">Sin Servicio.</string>
+    <string name="fecha">fecha</string>
+    <string name="voz">Voz</string>
+    <string name="_00_00_00_min">00:00:00 Min</string>
 
 
 </resources>
