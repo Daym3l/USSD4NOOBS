@@ -104,11 +104,15 @@ public class Accesibilidad extends AccessibilityService {
                 updateSaldo(valores.get(3), valores.get(7), "SMS");
 
             }
-            if ((valores.get(4).equals("KB")) || (valores.get(4).equals("MB"))) {
-                updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(7), "BOLSA");
-
+            if ((valores.get(4).equals("KB")) || (valores.get(4).equals("MB")) || (valores.get(4).equals("GB"))) {
+               if(valores.get(2).equals("Paquetes:")){
+                   updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(6), "BOLSA");
+               }else{
+                   updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(7), "BOLSA");
+               }
             }
-            if ((valores.get(5).equals("KB")) || (valores.get(5).equals("MB"))) {
+
+            if ((valores.get(5).equals("KB")) || (valores.get(5).equals("MB")) || (valores.get(4).equals("GB"))) {
                 updateSaldo(valores.get(4) + " " + valores.get(5), valores.get(7), "BOLSA");
             }
 
@@ -122,7 +126,7 @@ public class Accesibilidad extends AccessibilityService {
             if (valores.get(6).equals("SMS.")) {
                 updateSaldo("0", "0", "SMS");
             }
-            if (valores.get(4).equals("Minutos")&& valores.get(9).equals("nueva") ) {
+            if (valores.get(4).equals("Minutos") && valores.get(9).equals("nueva")) {
                 updateSaldo("0:00:00 ", "0", "VOZ");
             }
             if (valores.get(4).equals("oferta.")) {

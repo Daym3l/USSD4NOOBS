@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:transition:25.3.1@aar">
+    <CLASSES>
+      <root url="jar://C:/Android/.android/build-cache/3a0d9646e65094ccdf85f2aa3c735bb53e79f4c7/output/jars/classes.jar!/" />
+      <root url="file://C:/Android/.android/build-cache/3a0d9646e65094ccdf85f2aa3c735bb53e79f4c7/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/PROGRAMAS/Desarrollo/ANDROID/sdk/extras/android/m2repository/com/android/support/transition/25.3.1/transition-25.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

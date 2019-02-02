@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/libs/MaterialDialogs/MaterialDialogs.iml" filepath="$PROJECT_DIR$/app/libs/MaterialDialogs/MaterialDialogs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/USSD4ETECSA.iml" filepath="$PROJECT_DIR$/USSD4ETECSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/USSD4NOOBS.iml" filepath="$PROJECT_DIR$/USSD4NOOBS.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

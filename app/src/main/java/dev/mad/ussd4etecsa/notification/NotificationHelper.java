@@ -69,24 +69,24 @@ public class NotificationHelper {
         }
     }
 
-    public static void registerLocationNotifChnnl(Context context) {
-        if (Build.VERSION.SDK_INT >= 26) {
-            NotificationManager mngr = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
-            if (mngr.getNotificationChannel(NOTIFICATION_CHANNEL_ID) != null) {
-                return;
-            }
-            //
-            NotificationChannel channel = new NotificationChannel(
-                    NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.notification_chnnl_location),
-                    NotificationManager.IMPORTANCE_LOW);
-            // Configure the notification channel.
-            channel.setDescription(context.getString(R.string.notification_chnnl_location_descr));
-            channel.enableLights(false);
-            channel.enableVibration(false);
-            mngr.createNotificationChannel(channel);
-        }
-    }
+//    public static void registerLocationNotifChnnl(Context context) {
+//        if (Build.VERSION.SDK_INT >= 26) {
+//            NotificationManager mngr = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
+//            if (mngr.getNotificationChannel(NOTIFICATION_CHANNEL_ID) != null) {
+//                return;
+//            }
+//            //
+//            NotificationChannel channel = new NotificationChannel(
+//                    NOTIFICATION_CHANNEL_ID,
+//                    context.getString(R.string.notification_chnnl_location),
+//                    NotificationManager.IMPORTANCE_LOW);
+//            // Configure the notification channel.
+//            channel.setDescription(context.getString(R.string.notification_chnnl_location_descr));
+//            channel.enableLights(false);
+//            channel.enableVibration(false);
+//            mngr.createNotificationChannel(channel);
+//        }
+//    }
 
     /**
      * Verificar q la notificacion este activa
@@ -139,18 +139,19 @@ public class NotificationHelper {
         NotificationCompat.InboxStyle inboxStyle = new NotificationCompat.InboxStyle();
         Notification.Builder nBuilder;
 
-        if (Build.VERSION.SDK_INT >= 26) {
-            nBuilder = new Notification.Builder(context, NOTIFICATION_CHANNEL_ID);
-        } else {
-            nBuilder = new Notification.Builder(context);
-        }
+//        if (Build.VERSION.SDK_INT >= 26) {
+//            nBuilder = new Notification.Builder(context, NOTIFICATION_CHANNEL_ID);
+//        } else {
+//            nBuilder = new Notification.Builder(context);
+//        }
+        nBuilder = new Notification.Builder(context);
         Intent notificationIntent = null;
 
         notificationIntent = new Intent(this.context, Nav_Principal.class);
 
 
         PendingIntent contentIntent = PendingIntent.getActivity(this.context, 0, notificationIntent, 0);
-        registerLocationNotifChnnl(context);
+//        registerLocationNotifChnnl(context);
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
