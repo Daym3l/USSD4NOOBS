@@ -80,9 +80,9 @@ public class AmigosFrafment extends Fragment {
                 Util.marcarNumero("133*4*3*1*1", getActivity());
                 try {
                     List<DatAmigo> amigos = amigosModel.getAmigos();
-                    if(amigos.size()<3){
+                    if (amigos.size() < 3) {
                         addFriend.setEnabled(true);
-                    }else {
+                    } else {
                         addFriend.setEnabled(false);
                     }
                 } catch (SQLException e) {
@@ -95,11 +95,9 @@ public class AmigosFrafment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    try {
-                        init();
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
+
+                    Util.marcarNumero("133*4*1*1", getActivity());
+
 
                 } else {
                     final MaterialDialog materialDialog = new MaterialDialog(getContext());
