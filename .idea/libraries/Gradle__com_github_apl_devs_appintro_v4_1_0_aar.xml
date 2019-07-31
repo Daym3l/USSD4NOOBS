@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.apl-devs:appintro:v4.1.0@aar">
     <CLASSES>
-      <root url="file://C:/Android/.android/build-cache/ac2efd32a2eeb37336af23787b4e757e3d05f59b/output/res" />
-      <root url="jar://C:/Android/.android/build-cache/ac2efd32a2eeb37336af23787b4e757e3d05f59b/output/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10.1-all/caches/transforms-1/files-1.1/jetified-appintro-v4.1.0.aar/c2794eb68fc3b928aacf3eda95f274a4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10.1-all/caches/transforms-1/files-1.1/jetified-appintro-v4.1.0.aar/c2794eb68fc3b928aacf3eda95f274a4/res" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10.1-all/caches/modules-2/files-2.1/com.github.apl-devs/appintro/v4.1.0/eea80f6a419f2a91cace35b2696435a5d946d729/appintro-v4.1.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

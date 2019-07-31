@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: me.drakeet.materialdialog:library:1.2.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10.1-all/caches/transforms-1/files-1.1/library-1.2.2.aar/71088accb8c374e05fd4b2417ed4065f/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10.1-all/caches/transforms-1/files-1.1/library-1.2.2.aar/71088accb8c374e05fd4b2417ed4065f/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10.1-all/caches/modules-2/files-2.1/me.drakeet.materialdialog/library/1.2.2/f04bc95ed3fead0ae197f1f63b0f85f3e86afe65/library-1.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

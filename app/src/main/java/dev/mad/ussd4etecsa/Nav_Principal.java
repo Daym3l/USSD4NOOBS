@@ -11,26 +11,26 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.CardView;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.appcompat.app.AlertDialog;
+import androidx.cardview.widget.CardView;
 import android.telephony.TelephonyManager;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextUtils;
 import android.view.View;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.navigation.NavigationView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -741,11 +741,11 @@ public class Nav_Principal extends AppCompatActivity
                     bonoSms.setText(valores.get(1) + " SMS");
                     tv_activo_Bono.setText("Bono activo");
                 } else if (valores.size() == 3) {
-                    bono.setText(valores.get(0) + " MIN");
-                    bonoSms.setText(valores.get(1) + " SMS");
-                    tv_activo_Bono.setText("$" + valores.get(2));
+                    bono.setText(valores.get(0)+" + "+valores.get(1)+valores.get(2)+" de navegacion Nacional.");
+                    bonoSms.setText("");
+                    tv_activo_Bono.setText("Bono Activo");
                 } else {
-                    tv_activo_Bono.setText("$" + valores.get(0));
+                    tv_activo_Bono.setText(valores.get(0));
                 }
 
                 venceBono.setText(ussdObjetctBono.get(0).getFechavencimiento());

@@ -1,17 +1,15 @@
 package dev.mad.ussd4etecsa.notification;
 
 import android.app.Notification;
-import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.os.Build;
 import android.service.notification.StatusBarNotification;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.NotificationCompat;
+import androidx.annotation.RequiresApi;
+import androidx.core.app.NotificationCompat;
 
 
 import com.j256.ormlite.android.apptools.OpenHelperManager;

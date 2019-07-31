@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.fredericojssilva:ShowTipsView:v1.0.4@aar">
     <CLASSES>
-      <root url="file://C:/Android/.android/build-cache/f9d100ac0277f1f11ae3858f89fb315a7dd04502/output/res" />
-      <root url="jar://C:/Android/.android/build-cache/f9d100ac0277f1f11ae3858f89fb315a7dd04502/output/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10.1-all/caches/transforms-1/files-1.1/ShowTipsView-v1.0.4.aar/f190058531950aedb7fedc306af7567e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10.1-all/caches/transforms-1/files-1.1/ShowTipsView-v1.0.4.aar/f190058531950aedb7fedc306af7567e/res" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10.1-all/caches/modules-2/files-2.1/com.github.fredericojssilva/ShowTipsView/v1.0.4/231795c6f843ab2699e082c40c146829bb26796d/ShowTipsView-v1.0.4-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

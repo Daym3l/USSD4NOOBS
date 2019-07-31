@@ -104,15 +104,15 @@ public class Accesibilidad extends AccessibilityService {
                 updateSaldo(valores.get(3), valores.get(7), "SMS");
 
             }
-            if ((valores.get(4).equals("KB")) || (valores.get(4).equals("MB")) || (valores.get(4).equals("GB"))) {
-               if(valores.get(2).equals("Paquetes:")){
-                   updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(6), "BOLSA");
-               }else{
-                   updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(7), "BOLSA");
-               }
+            if (((valores.get(4).equals("KB")) || (valores.get(4).equals("MB")) || (valores.get(4).equals("GB"))) && valores.size() > 7) {
+                if (valores.get(2).equals("Paquetes:")) {
+                    updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(6), "BOLSA");
+                } else {
+                    updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(7), "BOLSA");
+                }
             }
 
-            if ((valores.get(5).equals("KB")) || (valores.get(5).equals("MB")) || (valores.get(4).equals("GB"))) {
+            if ((valores.get(5).equals("KB")) || (valores.get(5).equals("MB")) || (valores.get(5).equals("GB"))) {
                 updateSaldo(valores.get(4) + " " + valores.get(5), valores.get(7), "BOLSA");
             }
 
@@ -177,6 +177,22 @@ public class Accesibilidad extends AccessibilityService {
                 }
             }
         }
+
+        if (valores.size() == 7) {
+            String bono = valores.get(0);
+            StringTokenizer tokenizer = new StringTokenizer(bono, "$");
+            if (tokenizer.countTokens() > 1) {
+                String bonos = tokenizer.nextToken();
+                String val = tokenizer.nextToken();
+                if (bonos.equals("Bono:")) {
+                    String valor = "$"+val;
+                    valor += " " + valores.get(3);
+                    valor += " " + valores.get(4);
+                    updateSaldo(valor, valores.get(6), "BONO");
+                }
+            }
+        }
+
         if (valores.size() == 3) {
             String bono = valores.get(0);
             StringTokenizer tokenizer = new StringTokenizer(bono, "$");

@@ -10,7 +10,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.CountDownTimer;
 import android.provider.CallLog;
-import android.support.v4.app.ActivityCompat;
+import androidx.core.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 
 import java.sql.SQLException;

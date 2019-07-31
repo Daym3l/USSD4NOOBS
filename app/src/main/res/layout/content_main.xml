@@ -91,7 +91,7 @@
 
             </LinearLayout>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cv_saldo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -202,9 +202,9 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/c_voz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -340,9 +340,9 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/c_Sms"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -463,9 +463,9 @@
                     </LinearLayout>
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/c_Bolsa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -587,9 +587,9 @@
                     </LinearLayout>
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cv_bono"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -712,7 +712,7 @@
                     </LinearLayout>
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
     </ScrollView>
