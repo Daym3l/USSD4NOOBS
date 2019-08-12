@@ -745,7 +745,9 @@ public class Nav_Principal extends AppCompatActivity
                     bonoSms.setText("");
                     tv_activo_Bono.setText("Bono Activo");
                 } else {
-                    tv_activo_Bono.setText(valores.get(0));
+                    bono.setText("$"+ valores.get(0));
+                    bonoSms.setText("");
+                    tv_activo_Bono.setText("Bono Activo");
                 }
 
                 venceBono.setText(ussdObjetctBono.get(0).getFechavencimiento());
