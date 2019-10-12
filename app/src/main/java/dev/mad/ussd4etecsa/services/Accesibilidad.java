@@ -180,18 +180,49 @@ public class Accesibilidad extends AccessibilityService {
 
         if (valores.size() == 7) {
             String bono = valores.get(0);
+            String venceData = valores.get(2);
+            String[] vence = venceData.split("\\.");
             StringTokenizer tokenizer = new StringTokenizer(bono, "$");
             if (tokenizer.countTokens() > 1) {
                 String bonos = tokenizer.nextToken();
                 String val = tokenizer.nextToken();
                 if (bonos.equals("Bono:")) {
-                    String valor = "$"+val;
+                    String valor = "$" + val;
                     valor += " " + valores.get(3);
                     valor += " " + valores.get(4);
-                    updateSaldo(valor, valores.get(6), "BONO");
+                    updateSaldo(valor, vence[0], "BONO");
                 }
             }
         }
+        if (valores.size() == 14) {
+            String bono = valores.get(0);
+            StringTokenizer tokenizer = new StringTokenizer(bono, "$");
+            if (tokenizer.countTokens() > 1) {
+                String bonos = tokenizer.nextToken();
+                String val = tokenizer.nextToken();
+                if (bonos.equals("Bono:")) {
+                    String valor = "$" + val;
+                    valor += " " + valores.get(3) + " MIN " + valores.get(7) + " SMS";
+                    valor += " " + valores.get(10) + " " + valores.get(11);
+                    updateSaldo(valor, valores.get(5), "BONO");
+                }
+            }
+        }
+        if (valores.size() == 11) {
+            String bono = valores.get(0);
+            StringTokenizer tokenizer = new StringTokenizer(bono, "$");
+            if (tokenizer.countTokens() > 1) {
+                String bonos = tokenizer.nextToken();
+                String val = tokenizer.nextToken();
+                if (bonos.equals("Bono:")) {
+                    String valor = "$" + val;
+                    valor += " " + valores.get(4) + " SMS";
+                    valor += " " + valores.get(7) + " " + valores.get(8);
+                    updateSaldo(valor, valores.get(2), "BONO");
+                }
+            }
+        }
+
 
         if (valores.size() == 3) {
             String bono = valores.get(0);

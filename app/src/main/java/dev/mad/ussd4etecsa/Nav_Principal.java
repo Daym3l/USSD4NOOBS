@@ -11,26 +11,32 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
+
 import android.telephony.TelephonyManager;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextUtils;
 import android.view.View;
+
 import com.google.android.material.navigation.NavigationView;
+
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -77,7 +83,7 @@ public class Nav_Principal extends AppCompatActivity
     TextView saldo;
     TextView venceSaldo;
     TextView bono;
-    TextView bonoSms;
+
     TextView venceBono;
     TextView tv_voz;
     TextView tv_vozVence;
@@ -107,7 +113,7 @@ public class Nav_Principal extends AppCompatActivity
 
     private static final String[] ARRAY_VOZ = {"5 Minutos / $1.50", "10 Minutos / $2.90", "15 Minutos / $4.20", "25 Minutos / $6.50", "40 Minutos / $10.00"};
     private static final String[] ARRAY_SMS = {"10 Mensajes / $0.70", "20 Mensajes / $1.30", "35 Mensajes / $2.10", "45 Mensajes / $2.45"};
-    private static final String[] ARRAY_DATOS = {"Bolsa Nauta", "Tarifa por Consumo","600MB de Internet / $7"," 1GB de Internet/ $10","2.5GB de Internet / $20","4GB de Internet / $30"};
+    private static final String[] ARRAY_DATOS = {"Bolsa Nauta", "Tarifa por Consumo", "600MB de Internet / $7", " 1GB de Internet/ $10", "2.5GB de Internet / $20", "4GB de Internet / $30"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,7 +132,7 @@ public class Nav_Principal extends AppCompatActivity
         saldo = (TextView) findViewById(R.id.tv_valor_saldo);
         venceSaldo = (TextView) findViewById(R.id.tv_valor_vence);
         bono = (TextView) findViewById(R.id.tv_bono_saldo);
-        bonoSms = (TextView) findViewById(R.id.tv_bono_sms);
+
         scrollView = (ScrollView) findViewById(R.id.sv_contenedor);
         venceBono = (TextView) findViewById(R.id.tv_bono_vence);
         tv_voz = (TextView) findViewById(R.id.tv_voz_vaue);
@@ -730,7 +736,6 @@ public class Nav_Principal extends AppCompatActivity
             // Servicio de Bono
             if (ussdObjetctBono.get(0).getValor().equals("00:00:00") || ussdObjetctBono.get(0).getValor().equals("0.00")) {
                 bono.setText(ussdObjetctBono.get(0).getValor() + " MIN");
-                bonoSms.setText(0 + " SMS");
                 venceBono.setText(ussdObjetctBono.get(0).getFechavencimiento());
                 tv_activo_Bono.setText("Sin Bonificación.");
                 tv_activo_Bono.setTextColor(getResources().getColor(R.color.rojo));
@@ -738,15 +743,25 @@ public class Nav_Principal extends AppCompatActivity
                 List<String> valores = Util.convertirCadena(ussdObjetctBono.get(0).getValor());
                 if (valores.size() == 2) {
                     bono.setText(valores.get(0) + " MIN");
-                    bonoSms.setText(valores.get(1) + " SMS");
+
                     tv_activo_Bono.setText("Bono activo");
                 } else if (valores.size() == 3) {
-                    bono.setText(valores.get(0)+" + "+valores.get(1)+valores.get(2)+" de navegacion Nacional.");
-                    bonoSms.setText("");
+                    bono.setText(valores.get(0) + " + " + valores.get(1) + valores.get(2) + " de navegacion Nacional.");
+
+                    tv_activo_Bono.setText("Bono Activo");
+
+                } else if (valores.size() == 5) {
+                    bono.setText(valores.get(0) + " + " + valores.get(1) + " " + valores.get(2) + " + " + valores.get(3) + " " + valores.get(4) + " de navegacion Nacional.");
+
+                    tv_activo_Bono.setText("Bono Activo");
+
+                } else if (valores.size() == 7) {
+                    bono.setText(valores.get(0) + " + " + valores.get(1) + " " + valores.get(2) + " + " + valores.get(3) + " " + valores.get(4) + " + " + valores.get(5) + " " + valores.get(6) + " de navegacion Nacional.");
+
                     tv_activo_Bono.setText("Bono Activo");
                 } else {
-                    bono.setText("$"+ valores.get(0));
-                    bonoSms.setText("");
+                    bono.setText("$" + valores.get(0));
+
                     tv_activo_Bono.setText("Bono Activo");
                 }
 

@@ -658,15 +658,6 @@
                             android:text="00:00:00 MIN"
                             android:textSize="20sp" />
 
-                        <TextView
-                            android:id="@+id/tv_bono_sms"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-condensed"
-                            android:paddingLeft="8dp"
-                            android:text="0 mensajes"
-                            android:textSize="20sp" />
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
