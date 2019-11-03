@@ -268,29 +268,14 @@ public class Accesibilidad extends AccessibilityService {
     }
 
     private String processUSSDText(List<CharSequence> eventText) {
-
         String s;
-        Log.i("version SDK", String.valueOf(Build.VERSION.SDK_INT));
-        if (Build.VERSION.SDK_INT == 18 || Build.VERSION.SDK_INT == 17 || Build.VERSION.SDK_INT == 16) {
-            s = String.valueOf(eventText.get(1));
-        } else {
-            s = String.valueOf(eventText.get(0));
-        }
-//        for (CharSequence s : eventText) {
-//            String text = String.valueOf(s);
-//            // Return text if text is the expected ussd response
-////
-//            if (true) {
-//                return text;
-//            }
-//        }
+        s = String.valueOf(eventText.get(0));
         return s;
     }
 
     private void mostrarToast(String text) {
         Context context = getApplicationContext();
         int duration = Toast.LENGTH_LONG;
-
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
     }
@@ -310,7 +295,6 @@ public class Accesibilidad extends AccessibilityService {
         info.feedbackType = AccessibilityServiceInfo.FEEDBACK_GENERIC;
         setServiceInfo(info);
     }
-
 
 }
 

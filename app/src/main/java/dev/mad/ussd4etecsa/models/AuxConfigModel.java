@@ -43,15 +43,17 @@ public class AuxConfigModel {
 
     /**
      * Actualiza la configuración
+     *
      * @param config
      * @throws SQLException
      */
-    public void updateConfig(String config, String valor,Context context) throws SQLException {
-        RuntimeExceptionDao<AuxConfig, Integer> configDao = dbHelper.getConfigRuntimeDao();
-        if (existeConfig(config,context)) {
+    public void updateConfig(String config, String valor, Context context) throws SQLException {
+
+        if (existeConfig(config, context)) {
             updateValor(valor, config);
 
         } else {
+            RuntimeExceptionDao<AuxConfig, Integer> configDao = dbHelper.getConfigRuntimeDao();
             configDao.create(new AuxConfig(config, "1"));
             Log.i("Config", "Configuracion creada");
         }
@@ -59,6 +61,7 @@ public class AuxConfigModel {
 
     /**
      * Actulizar el valor de la configuración
+     *
      * @param valor
      */
     public void updateValor(String valor, String config) throws SQLException {
@@ -73,6 +76,7 @@ public class AuxConfigModel {
 
     /**
      * Obtener valor de la configuración
+     *
      * @param config
      * @return
      * @throws SQLException
@@ -80,7 +84,7 @@ public class AuxConfigModel {
     public String getValorConfig(String config) throws SQLException {
         RuntimeExceptionDao<AuxConfig, Integer> configDao = dbHelper.getConfigRuntimeDao();
         List<AuxConfig> listConfig = configDao.queryForEq("name", config);
-    return listConfig.get(0).getValor();
+        return listConfig.get(0).getValor();
     }
 
 }
