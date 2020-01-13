@@ -53,6 +53,7 @@ public class NotificationHelper {
             this.mChanel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, name, importance);
             this.mChanel.setDescription(description);
             this.mChanel.enableLights(true);
+            this.mChanel.setShowBadge(true);
             this.mChanel.setLightColor(R.color.primary);
             this.mChanel.enableVibration(true);
             this.mChanel.setVibrationPattern(new long[]{0, 100, 100, 100, 100, 100});
@@ -129,7 +130,8 @@ public class NotificationHelper {
 
         if (Build.VERSION.SDK_INT >= 26) {
             mBuilder = new NotificationCompat.Builder(context);
-            mBuilder.setVisibility(NotificationCompat.VISIBILITY_PRIVATE)
+            mBuilder.setContentIntent(contentIntent)
+                    .setVisibility(NotificationCompat.VISIBILITY_PRIVATE)
                     .setSmallIcon(iconNotificactionApp)
                     .setOngoing(true)
                     .setChannelId(NOTIFICATION_CHANNEL_ID)
@@ -160,7 +162,12 @@ public class NotificationHelper {
             }
             if (!ussdObjetctBono.get(0).getValor().equals("00:00:00") && !ussdObjetctBono.get(0).getValor().equals("0.00")) {
                 List bono = Util.convertirCadena(ussdObjetctBono.get(0).getValor());
-                events[4] = "BONO: " + bono.get(0) + " MIN y " + bono.get(1) + " SMS hasta el " + ussdObjetctBono.get(0).getFechavencimiento();
+                if(bono.size()==1){
+                    events[4] = "BONO: " + bono.get(0) + " de navegacion Nacional";
+                }else{
+                    events[4] = "BONO: " + bono.get(0) + " MIN y " + bono.get(1) + " SMS hasta el " + ussdObjetctBono.get(0).getFechavencimiento();
+                }
+
             }
 
 

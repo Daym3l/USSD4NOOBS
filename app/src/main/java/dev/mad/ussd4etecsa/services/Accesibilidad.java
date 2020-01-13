@@ -104,16 +104,34 @@ public class Accesibilidad extends AccessibilityService {
                 updateSaldo(valores.get(3), valores.get(7), "SMS");
 
             }
+            if ((valores.get(5).equals("KB")) || (valores.get(5).equals("MB")) || (valores.get(5).equals("GB"))) {
+                updateSaldo(valores.get(4) + " " + valores.get(5), valores.get(7), "BOLSA");
+            }
             if (((valores.get(4).equals("KB")) || (valores.get(4).equals("MB")) || (valores.get(4).equals("GB"))) && valores.size() > 7) {
-                if (valores.get(2).equals("Paquetes:")) {
-                    updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(6), "BOLSA");
+                if (valores.get(2).equals("Paquetes:") ) {
+                    if (valores.get(6).equals("KB") || valores.get(6).equals("MB") || valores.get(6).equals("GB")){
+                        String texto = valores.get(3)+" "+valores.get(4)+" "+valores.get(5)+" "+valores.get(6)+" "+valores.get(7)+" "+valores.get(8);
+                        updateSaldo(texto, valores.get(10), "BOLSA");
+                    }else{
+                        updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(6), "BOLSA");
+                    }
+
                 } else {
                     updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(7), "BOLSA");
                 }
             }
+            if (((valores.get(5).equals("KB")) || (valores.get(5).equals("MB")) || (valores.get(5).equals("GB"))) && valores.size() > 7) {
+                if (valores.get(3).equals("Paquetes:") ) {
+                    if (valores.get(7).equals("KB") || valores.get(7).equals("MB") || valores.get(7).equals("GB")){
+                        String texto = valores.get(4)+" "+valores.get(5)+" "+valores.get(6)+" "+valores.get(7)+" "+valores.get(8)+" "+valores.get(9);
+                        updateSaldo(texto, valores.get(11), "BOLSA");
+                    }else{
+                        updateSaldo(valores.get(4) + " " + valores.get(5), valores.get(7), "BOLSA");
+                    }
 
-            if ((valores.get(5).equals("KB")) || (valores.get(5).equals("MB")) || (valores.get(5).equals("GB"))) {
-                updateSaldo(valores.get(4) + " " + valores.get(5), valores.get(7), "BOLSA");
+                } else {
+                    updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(7), "BOLSA");
+                }
             }
 
             if (valores.get(4).equals("MB.")) {
@@ -234,6 +252,11 @@ public class Accesibilidad extends AccessibilityService {
                     updateSaldo(val, valores.get(2), "BONO");
                 }
             }
+        }
+        if (valores.size() == 5 && valores.get(0).equals("Bono:Datos.cu")) {
+            String valor = valores.get(1);
+            valor += valores.get(2);
+            updateSaldo(valor, valores.get(4), "BONO");
         }
         if (!respuesta.equals(getString(R.string.alert_dialog_title))) {
             mostrarToast(respuesta);

@@ -111,9 +111,9 @@ public class Nav_Principal extends AppCompatActivity
     private static final String TAG_TRANFERENCIA = "TRANSFERENCIAS";
     private static final String TAG_AMIGOS = "AMIGOS";
 
-    private static final String[] ARRAY_VOZ = {"5 Minutos / $1.50", "10 Minutos / $2.90", "15 Minutos / $4.20", "25 Minutos / $6.50", "40 Minutos / $10.00"};
-    private static final String[] ARRAY_SMS = {"10 Mensajes / $0.70", "20 Mensajes / $1.30", "35 Mensajes / $2.10", "45 Mensajes / $2.45"};
-    private static final String[] ARRAY_DATOS = {"Bolsa Nauta", "Tarifa por Consumo", "600MB de Internet / $7", " 1GB de Internet/ $10", "2.5GB de Internet / $20", "4GB de Internet / $30"};
+    private static final String[] ARRAY_VOZ = {"$1.50 - 5 Minutos", "$2.90 - 10 Minutos", "$4.20 - 15 Minutos", " $6.50 - 25 Minutos", "$10.00 - 40 Minutos"};
+    private static final String[] ARRAY_SMS = {"$0.70 - 10 Mensajes", "$1.30 - 20 Mensajes", "$2.10 - 35 Mensajes", "$2.45 - 45 Mensajes"};
+    private static final String[] ARRAY_DATOS = {"Tarifa por Consumo", "Bolsa Nauta", "Bolsa Diaria", "$5 - 400 MB de Internet", "$7 - 600 MB de Internet", "$10 - 1 GB de Internet", "$20 - 2.5 GB de Internet", "$30 - 4 GB de Internet", "$35 - 6.5 GB de Internet", "$45 - 10 GB de Internet"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -459,10 +459,7 @@ public class Nav_Principal extends AppCompatActivity
             fragmentGestor(new AboutUsFragment(), TAG_ABOUT);
 
 
-        } else if (id == R.id.nav_amigos) {
-            fragmentGestor(new AmigosFrafment(), TAG_AMIGOS);
-            toolbar.setTitle(getString(R.string.amigos));
-        } else if (id == R.id.nav_help) {
+        }else if (id == R.id.nav_help) {
             helpApp();
         }
 
@@ -595,27 +592,43 @@ public class Nav_Principal extends AppCompatActivity
 
                         switch (which) {
                             case 0: {
-                                valor[0] = "133*1*2";
-                                break;
-                            }
-                            case 1: {
                                 valor[0] = "133*1*1";
                                 break;
                             }
+                            case 1: {
+                                valor[0] = "133*1*2";
+                                break;
+                            }
                             case 2: {
-                                valor[0] = "133*1*3*1";
+                                valor[0] = "133*1*3";
                                 break;
                             }
                             case 3: {
-                                valor[0] = "133*1*3*2";
+                                valor[0] = "133*1*4*1";
                                 break;
                             }
                             case 4: {
-                                valor[0] = "133*1*3*3";
+                                valor[0] = "133*1*4*2";
                                 break;
                             }
                             case 5: {
-                                valor[0] = "133*1*3*4";
+                                valor[0] = "133*1*4*3";
+                                break;
+                            }
+                            case 6: {
+                                valor[0] = "133*1*4*4";
+                                break;
+                            }
+                            case 7: {
+                                valor[0] = "133*1*4*5";
+                                break;
+                            }
+                            case 8: {
+                                valor[0] = "133*1*5*1";
+                                break;
+                            }
+                            case 9: {
+                                valor[0] = "133*1*5*2";
                                 break;
                             }
 
@@ -760,7 +773,7 @@ public class Nav_Principal extends AppCompatActivity
 
                     tv_activo_Bono.setText("Bono Activo");
                 } else {
-                    bono.setText("$" + valores.get(0));
+                    bono.setText(valores.get(0) + " de navegacion Nacional");
 
                     tv_activo_Bono.setText("Bono Activo");
                 }
