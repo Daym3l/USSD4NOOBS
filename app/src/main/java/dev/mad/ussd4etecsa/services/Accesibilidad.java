@@ -292,7 +292,12 @@ public class Accesibilidad extends AccessibilityService {
 
     private String processUSSDText(List<CharSequence> eventText) {
         String s;
-        s = String.valueOf(eventText.get(0));
+        if(eventText.size()==3){
+            s = String.valueOf(eventText.get(1));
+        }else{
+            s = String.valueOf(eventText.get(0));
+        }
+
         return s;
     }
 
