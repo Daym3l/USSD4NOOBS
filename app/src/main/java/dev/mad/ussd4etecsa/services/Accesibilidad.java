@@ -29,6 +29,7 @@ import dev.mad.ussd4etecsa.models.Tables.DatAmigo;
 import dev.mad.ussd4etecsa.models.Tables.DatUssd;
 import dev.mad.ussd4etecsa.bd_config.DatabaseHelper;
 import dev.mad.ussd4etecsa.R;
+import dev.mad.ussd4etecsa.utiles.Util;
 
 /**
  * Created by Daymel on 25-Apr-17.
@@ -93,14 +94,14 @@ public class Accesibilidad extends AccessibilityService {
         List<String> valores = convertirCadena(respuesta);
         if (valores.size() > 6) {
             if (valores.get(0).equals("Saldo")) {
-                updateSaldo(valores.get(1), valores.get(6), "SALDO");
+                updateSaldo(valores.get(1), valores.get(7), "SALDO");
 
             }
             if (valores.get(4).equals("MIN")) {
                 updateSaldo(valores.get(3), valores.get(7), "VOZ");
 
             }
-            if (valores.get(4).equals("SMS") && !valores.get(0).equals("Bono:Min.")) {
+            if (valores.get(4).equals("SMS") && !valores.get(0).equals("Bono:Min.") && !valores.get(0).equals("Bono->vence:")) {
                 updateSaldo(valores.get(3), valores.get(7), "SMS");
 
             }
@@ -192,6 +193,35 @@ public class Accesibilidad extends AccessibilityService {
                     valor += " " + valores.get(7);
                     valor += " " + val;
                     updateSaldo(valor, valores.get(9), "BONO");
+                }
+            }
+        }
+
+        if (valores.size() == 10 && valores.get(0).equals("Bono->vence:")) {
+            String bono = valores.get(0);
+            StringTokenizer tokenizer = new StringTokenizer(bono, "->");
+            if (tokenizer.countTokens() > 1) {
+                String bonos = tokenizer.nextToken();
+
+                if (bonos.equals("Bono")) {
+                    String valor = "$"+ Util.getResultText(valores.get(2));
+                    valor += " " +Util.getResultText(valores.get(4)) + " MIN " + Util.getResultText(valores.get(6)) + " SMS";
+                    valor += " " + valores.get(8) + " MB ";
+                    updateSaldo(valor, Util.getResultDate(valores.get(9)), "BONO");
+                }
+            }
+        }
+        if (valores.size() == 9 && valores.get(0).equals("Bono->vence:")) {
+            String bono = valores.get(0);
+            StringTokenizer tokenizer = new StringTokenizer(bono, "->");
+            if (tokenizer.countTokens() > 1) {
+                String bonos = tokenizer.nextToken();
+
+                if (bonos.equals("Bono")) {
+                    String valor =  Util.getResultText(valores.get(1));
+                    valor += " " +Util.getResultText(valores.get(3)) + " MIN " + Util.getResultText(valores.get(5)) + " SMS";
+                    valor += " " + valores.get(7) + " MB ";
+                    updateSaldo(valor, Util.getResultDate(valores.get(8)), "BONO");
                 }
             }
         }

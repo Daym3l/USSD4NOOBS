@@ -113,7 +113,7 @@ public class Nav_Principal extends AppCompatActivity
 
     private static final String[] ARRAY_VOZ = {"$1.50 - 5 Minutos", "$2.90 - 10 Minutos", "$4.20 - 15 Minutos", " $6.50 - 25 Minutos", "$10.00 - 40 Minutos"};
     private static final String[] ARRAY_SMS = {"$0.70 - 10 Mensajes", "$1.30 - 20 Mensajes", "$2.10 - 35 Mensajes", "$2.45 - 45 Mensajes"};
-    private static final String[] ARRAY_DATOS = {"Tarifa por Consumo", "Bolsa Nauta", "Bolsa Diaria", "$5 - 400 MB de Internet", "$7 - 600 MB de Internet", "$10 - 1 GB de Internet", "$20 - 2.5 GB de Internet", "$30 - 4 GB de Internet", "$35 - 6.5 GB de Internet", "$45 - 10 GB de Internet"};
+    private static final String[] ARRAY_DATOS = {"Tarifa por Consumo", "$1 - Bolsa de Correo", "$1 - Bolsa Diaria LTE + 200 MB", "$5 - 400 MB + 500 MB(LTE)", "$7 - 600 MB + 800 MB(LTE)", "$10 - 1 GB + 1.5 GB(LTE)", "$20 - 2.5 GB + 3 GB(LTE)", "$30 - 4 GB + 5 GB(LTE)", "$4 - 1 GB(LTE)", "$8 - 2.5 GB(LTE)", "$45 - 14 GB(LTE)"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -459,7 +459,7 @@ public class Nav_Principal extends AppCompatActivity
             fragmentGestor(new AboutUsFragment(), TAG_ABOUT);
 
 
-        }else if (id == R.id.nav_help) {
+        } else if (id == R.id.nav_help) {
             helpApp();
         }
 
@@ -629,6 +629,10 @@ public class Nav_Principal extends AppCompatActivity
                             }
                             case 9: {
                                 valor[0] = "133*1*5*2";
+                                break;
+                            }
+                            case 10: {
+                                valor[0] = "133*1*5*3";
                                 break;
                             }
 

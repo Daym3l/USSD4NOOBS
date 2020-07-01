@@ -17,6 +17,7 @@ import android.widget.EditText;
 
 import java.io.ByteArrayInputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.StringTokenizer;
@@ -191,6 +192,20 @@ public class Util {
             }
         }
         return size;
+    }
+
+    public static String getResultText(String texto) {
+        String result = "";
+        StringTokenizer tokenizer = new StringTokenizer(texto, "->");
+        if (tokenizer.countTokens() > 1) {
+            result = tokenizer.nextToken();
+        }
+        return result;
+    }
+
+    public static String getResultDate(String texto) {
+        List<String> valores = Arrays.asList(texto.split("->"));
+        return valores.get(1);
     }
 
 }

@@ -6,8 +6,8 @@ android {
         applicationId "dev.mad.ussd4etecsa"
         minSdkVersion 23
         targetSdkVersion 28
-        versionCode 266
-        versionName "2.6.6"
+        versionCode 270
+        versionName "2.7.0"
 
     }
     buildTypes {
