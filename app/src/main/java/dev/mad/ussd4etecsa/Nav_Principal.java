@@ -55,7 +55,7 @@ import net.frederico.showtipsview.ShowTipsViewInterface;
 import java.util.List;
 
 import dev.mad.ussd4etecsa.aboutUS.AboutUsFragment;
-import dev.mad.ussd4etecsa.amigos.AmigosFrafment;
+
 import dev.mad.ussd4etecsa.settings.ConfigActivity;
 import dev.mad.ussd4etecsa.bd_config.DatabaseHelper;
 import dev.mad.ussd4etecsa.models.Tables.DatUssd;
@@ -65,6 +65,7 @@ import dev.mad.ussd4etecsa.services.GeneralService;
 import dev.mad.ussd4etecsa.services.UssdService;
 import dev.mad.ussd4etecsa.transferencia.TransferenciaFragment;
 import dev.mad.ussd4etecsa.utiles.Constantes;
+
 import dev.mad.ussd4etecsa.utiles.Util;
 
 

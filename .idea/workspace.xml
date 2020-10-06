@@ -14,11 +14,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d73bb81-f107-4212-a218-42d2b84719ab" name="Default" comment="Notifications fixed for android 8">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-v26/app_bar_principal_navigation.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/Nav_Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/Nav_Principal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/services/Accesibilidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/services/Accesibilidad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/utiles/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/utiles/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_principal_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_principal_navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sample_apk/release/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/sample_apk/release/output.json" afterDir="false" />
     </list>
     <ignored path="USSD4ETECSA.iws" />
@@ -55,7 +58,7 @@
     <session id="-24140083">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="44" />
+          <entry key="project.closed" value="45" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="4" />
@@ -64,53 +67,53 @@
           <entry key="project.open.time.14" value="4" />
           <entry key="project.open.time.15" value="7" />
           <entry key="project.open.time.16" value="5" />
-          <entry key="project.open.time.17" value="3" />
+          <entry key="project.open.time.17" value="4" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.open.time.9" value="5" />
-          <entry key="project.opened" value="44" />
+          <entry key="project.open.time.9" value="6" />
+          <entry key="project.opened" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="17" />
-          <entry key="gradle" value="85" />
-          <entry key="java" value="2496" />
+          <entry key="gradle" value="89" />
+          <entry key="java" value="2599" />
           <entry key="properties" value="7" />
           <entry key="txt" value="383" />
-          <entry key="xml" value="168" />
+          <entry key="xml" value="181" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="85" />
-          <entry key="JAVA" value="2496" />
+          <entry key="Groovy" value="89" />
+          <entry key="JAVA" value="2599" />
           <entry key="PLAIN_TEXT" value="400" />
           <entry key="Properties" value="7" />
-          <entry key="XML" value="168" />
+          <entry key="XML" value="181" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="gradle" value="27" />
-          <entry key="java" value="44" />
+          <entry key="gradle" value="29" />
+          <entry key="java" value="48" />
           <entry key="md" value="1" />
           <entry key="properties" value="1" />
-          <entry key="xml" value="55" />
+          <entry key="xml" value="64" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Groovy" value="27" />
-          <entry key="JAVA" value="44" />
+          <entry key="Groovy" value="29" />
+          <entry key="JAVA" value="48" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="1" />
-          <entry key="XML" value="55" />
+          <entry key="XML" value="64" />
         </counts>
       </usages-collector>
     </session>
@@ -121,74 +124,35 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_about_us.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="1020">
+              <caret line="60" column="48" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="48" />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/services/Accesibilidad.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3247">
-              <caret line="220" column="35" selection-start-line="220" selection-start-column="35" selection-end-line="220" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/utiles/Util.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3179">
-              <caret line="207" column="28" selection-start-line="207" selection-start-column="28" selection-end-line="207" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/Nav_Principal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="115" column="233" selection-start-line="115" selection-start-column="233" selection-end-line="115" selection-end-column="233" />
+            <state relative-caret-position="3805">
+              <caret line="310" column="19" selection-start-line="310" selection-start-column="19" selection-end-line="310" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#12338#12376#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/principal_navigation.xml">
-          <provider editor-type-id="text-editor" />
-          <provider selected="true" editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
-          <provider editor-type-id="text-editor" />
-          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+            <state relative-caret-position="153">
+              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
               <folding>
-                <marker date="1593102748158" expanded="true" signature="1472:1473" ph="{...}" />
+                <marker date="1601956501248" expanded="true" signature="1472:1473" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -228,6 +192,8 @@
       <find>inboxStyle</find>
       <find>ARRAY_DATOS</find>
       <find>menu</find>
+      <find>et_codRecarga</find>
+      <find>alertText</find>
     </findStrings>
     <replaceStrings>
       <replace>apply</replace>
@@ -3022,9 +2988,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/circle.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/img.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/widgets/RoundedImageView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/utiles/Constantes.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/transferencia/TransferenciaFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/models/AmigosModel.java" />
@@ -3043,7 +3006,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_facebok.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_transferencia.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/aboutUS/AboutUsFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_principal_navigation.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/Tutorial/Tutorial.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/hide_to_bottom.xml" />
@@ -3070,9 +3032,13 @@
         <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_principal_navigation_drawer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/utiles/Util.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar_principal_navigation.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/utiles/maskWatcher.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/utiles/MaskWatcher.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/Nav_Principal.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/services/Accesibilidad.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/Nav_Principal.java" />
       </list>
     </option>
   </component>
@@ -3109,10 +3075,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
+            <path>
+              <item name="USSD4NOOBS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="USSD4NOOBS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="USSD4NOOBS" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="ussd4etecsa" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
             <path>
               <item name="USSD4NOOBS" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
@@ -3122,6 +3102,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
     </panes>
   </component>
@@ -3131,7 +3112,7 @@
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.Flavors" value="" />
     <property name="ExportApk.SignV1" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="acc&#9;FILE&#9;file://D:/Daymel/Documents/DESARROLLO/www/ANDROID/AndroidStudioProjects/USSD4NOOBS/app/src/main/java/dev/mad/ussd4etecsa/services/Accesibilidad.java&#10;acs&#9;PSI&#9;JAVA://android.accessibilityservice.AccessibilityService&#10;mani&#9;FILE&#9;file://D:/Daymel/Documents/DESARROLLO/www/ANDROID/AndroidStudioProjects/USSD4ETECSA/app/src/main/AndroidManifest.xml&#10;manife&#9;FILE&#9;file://D:/Daymel/Documents/DESARROLLO/www/ANDROID/AndroidStudioProjects/USSD4ETECSA/app/src/main/AndroidManifest.xml&#10;tra&#9;FILE&#9;file://D:/Daymel/Documents/DESARROLLO/www/ANDROID/AndroidStudioProjects/USSD4ETECSA/app/src/main/java/dev/mad/ussd4etecsa/Transferencia/TransferenciaFragment.java&#10;sm&#9;FILE&#9;file://D:/Daymel/Documents/DESARROLLO/www/ANDROID/AndroidStudioProjects/USSD4ETECSA/app/src/main/java/dev/mad/ussd4etecsa/Receiber/SendSmsObserver.java" />
+    <property name="SearchEverywhereHistoryKey" value="ac&#9;FILE&#9;file://D:/Daymel/Documents/DESARROLLO/www/ANDROID/AndroidStudioProjects/USSD4NOOBS/app/src/main/java/dev/mad/ussd4etecsa/services/Accesibilidad.java&#10;acc&#9;FILE&#9;file://D:/Daymel/Documents/DESARROLLO/www/ANDROID/AndroidStudioProjects/USSD4NOOBS/app/src/main/java/dev/mad/ussd4etecsa/services/Accesibilidad.java&#10;acs&#9;PSI&#9;JAVA://android.accessibilityservice.AccessibilityService&#10;mani&#9;FILE&#9;file://D:/Daymel/Documents/DESARROLLO/www/ANDROID/AndroidStudioProjects/USSD4ETECSA/app/src/main/AndroidManifest.xml&#10;manife&#9;FILE&#9;file://D:/Daymel/Documents/DESARROLLO/www/ANDROID/AndroidStudioProjects/USSD4ETECSA/app/src/main/AndroidManifest.xml&#10;tra&#9;FILE&#9;file://D:/Daymel/Documents/DESARROLLO/www/ANDROID/AndroidStudioProjects/USSD4ETECSA/app/src/main/java/dev/mad/ussd4etecsa/Transferencia/TransferenciaFragment.java&#10;sm&#9;FILE&#9;file://D:/Daymel/Documents/DESARROLLO/www/ANDROID/AndroidStudioProjects/USSD4ETECSA/app/src/main/java/dev/mad/ussd4etecsa/Receiber/SendSmsObserver.java" />
     <property name="VectorAssetImportPath" value="C:\Users\Daymel" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
@@ -3692,7 +3673,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24946696" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24946696" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
       <window_info id="Build Variants" order="3" side_tool="true" />
@@ -3703,7 +3684,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32867134" />
-      <window_info anchor="bottom" x="-1920" y="23" width="1536" height="801" id="Debug" order="3" type="WINDOWED" weight="0.5780911" />
+      <window_info anchor="bottom" x="1941" y="50" width="1504" height="1028" id="Debug" order="3" type="FLOATING" visible="true" weight="0.5780911" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -3714,7 +3695,7 @@
       <window_info anchor="bottom" id="Gradle Console" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="bottom" id="Build" order="13" sideWeight="0.7254797" visible="true" weight="0.29175705" />
-      <window_info anchor="bottom" id="Android Profiler" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Android Profiler" order="14" />
       <window_info anchor="bottom" x="0" y="23" width="1536" height="811" id="Logcat" order="15" type="WINDOWED" weight="0.32867134" />
       <window_info anchor="bottom" id="Flutter Performance" order="16" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -3804,14 +3785,18 @@
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="app">
-        <watch expression="eventText" />
-        <watch expression="tokenizer" />
-        <watch expression="tokenizer" />
+        <watch expression="this" />
+        <watch expression="valor" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>tokenizer</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>bono</expression-string>
         <language-id>JAVA</language-id>
@@ -3820,12 +3805,12 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>valores.get(4)</expression-string>
+        <expression-string>tokenizer.countTokens()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>tokenizer.countTokens()</expression-string>
+        <expression-string>valores.get(4)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -3906,12 +3891,12 @@
     <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/dev/mad/ussd4etecsa/R.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-v21/content_main.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_amigos_frafment.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
@@ -3927,13 +3912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/PROGRAMAS/Desarrollo/ANDROID/sdk/sources/android-28/android/accessibilityservice/AccessibilityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="217" column="22" selection-start-line="217" selection-start-column="22" selection-end-line="217" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -3972,14 +3950,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ussd_saldo.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/models/AuxConfigModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -4008,42 +3978,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_principal_navigation.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_principal_navigation.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_principal_navigation.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_config.xml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_principal_navigation_drawer.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_about_us.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/services/Accesibilidad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3247">
-          <caret line="220" column="35" selection-start-line="220" selection-start-column="35" selection-end-line="220" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -4054,14 +4005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/principal_navigation.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -4069,22 +4012,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/principal_navigation.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ussd_saldo.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ussd_saldo_configure.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_principal_navigation.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_config.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_principal_navigation.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/utiles/MaskWatcher.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-v26/app_bar_principal_navigation.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_principal_navigation.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/Nav_Principal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="115" column="233" selection-start-line="115" selection-start-column="233" selection-end-line="115" selection-end-column="233" />
+        <state relative-caret-position="157">
+          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" column="48" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/PROGRAMAS/Desarrollo/ANDROID/sdk/sources/android-28/android/accessibilityservice/AccessibilityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="1635" selection-start-line="1635" selection-end-line="1635" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/services/Accesibilidad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3805">
+          <caret line="310" column="19" selection-start-line="310" selection-start-column="19" selection-end-line="310" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#12338#12376#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        <state relative-caret-position="153">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding>
-            <marker date="1593102748158" expanded="true" signature="1472:1473" ph="{...}" />
+            <marker date="1601956501248" expanded="true" signature="1472:1473" ph="{...}" />
           </folding>
         </state>
       </provider>

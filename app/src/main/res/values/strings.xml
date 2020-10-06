@@ -88,6 +88,8 @@
     <string name="fecha">fecha</string>
     <string name="voz">Voz</string>
     <string name="_00_00_00_min">00:00:00 Min</string>
+    <string name="logo_mio">logo_mio</string>
+    <string name="logo">Logo</string>
 
 
 </resources>

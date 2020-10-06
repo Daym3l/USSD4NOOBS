@@ -94,68 +94,81 @@ public class Accesibilidad extends AccessibilityService {
         List<String> valores = convertirCadena(respuesta);
         if (valores.size() > 6) {
             if (valores.get(0).equals("Saldo")) {
-                updateSaldo(valores.get(1), valores.get(7), "SALDO");
-
+                updateSaldo(valores.get(1).replace(',', ' '), valores.get(7), "SALDO");
+                return;
             }
             if (valores.get(4).equals("MIN")) {
                 updateSaldo(valores.get(3), valores.get(7), "VOZ");
-
+                return;
             }
             if (valores.get(4).equals("SMS") && !valores.get(0).equals("Bono:Min.") && !valores.get(0).equals("Bono->vence:")) {
                 updateSaldo(valores.get(3), valores.get(7), "SMS");
+                return;
 
             }
             if ((valores.get(5).equals("KB")) || (valores.get(5).equals("MB")) || (valores.get(5).equals("GB"))) {
                 updateSaldo(valores.get(4) + " " + valores.get(5), valores.get(7), "BOLSA");
+                return;
             }
             if (((valores.get(4).equals("KB")) || (valores.get(4).equals("MB")) || (valores.get(4).equals("GB"))) && valores.size() > 7) {
-                if (valores.get(2).equals("Paquetes:") ) {
-                    if (valores.get(6).equals("KB") || valores.get(6).equals("MB") || valores.get(6).equals("GB")){
-                        String texto = valores.get(3)+" "+valores.get(4)+" "+valores.get(5)+" "+valores.get(6)+" "+valores.get(7)+" "+valores.get(8);
+                if (valores.get(2).equals("Paquetes:")) {
+                    if (valores.get(6).equals("KB") || valores.get(6).equals("MB") || valores.get(6).equals("GB")) {
+                        String texto = valores.get(3) + " " + valores.get(4) + " " + valores.get(5) + " " + valores.get(6) + " " + valores.get(7) + " " + valores.get(8);
                         updateSaldo(texto, valores.get(10), "BOLSA");
-                    }else{
+                        return;
+                    } else {
                         updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(6), "BOLSA");
+                        return;
                     }
 
                 } else {
                     updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(7), "BOLSA");
+                    return;
                 }
             }
             if (((valores.get(5).equals("KB")) || (valores.get(5).equals("MB")) || (valores.get(5).equals("GB"))) && valores.size() > 7) {
-                if (valores.get(3).equals("Paquetes:") ) {
-                    if (valores.get(7).equals("KB") || valores.get(7).equals("MB") || valores.get(7).equals("GB")){
-                        String texto = valores.get(4)+" "+valores.get(5)+" "+valores.get(6)+" "+valores.get(7)+" "+valores.get(8)+" "+valores.get(9);
+                if (valores.get(3).equals("Paquetes:")) {
+                    if (valores.get(7).equals("KB") || valores.get(7).equals("MB") || valores.get(7).equals("GB")) {
+                        String texto = valores.get(4) + " " + valores.get(5) + " " + valores.get(6) + " " + valores.get(7) + " " + valores.get(8) + " " + valores.get(9);
                         updateSaldo(texto, valores.get(11), "BOLSA");
-                    }else{
+                        return;
+                    } else {
                         updateSaldo(valores.get(4) + " " + valores.get(5), valores.get(7), "BOLSA");
+                        return;
                     }
 
                 } else {
                     updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(7), "BOLSA");
+                    return;
                 }
             }
 
             if (valores.get(4).equals("MB.")) {
                 updateSaldo("0" + " " + "MB", "0", "BOLSA");
+                return;
             }
             if (valores.get(4).equals("Minutos")) {
                 updateSaldo(valores.get(3), valores.get(7), "VOZ");
-                Log.d("saldo", valores.get(3));
+                return;
             }
             if (valores.get(6).equals("SMS.")) {
                 updateSaldo("0", "0", "SMS");
+                return;
             }
             if (valores.get(4).equals("Minutos") && valores.get(9).equals("nueva")) {
                 updateSaldo("0:00:00 ", "0", "VOZ");
+                return;
             }
             if (valores.get(4).equals("oferta.")) {
                 updateSaldo("0.00", "0", "BOLSA");
+                return;
             }
 
             if (valores.get(0).equals("Bono:Min.")) {
                 String valor = valores.get(1);
                 valor += " " + valores.get(5);
                 updateSaldo(valor, valores.get(3), "BONO");
+                return;
             }
 
             if (valores.get(4).equals("Amigos:")) {
@@ -179,6 +192,7 @@ public class Accesibilidad extends AccessibilityService {
         if (valores.size() == 6) {
             if (valores.get(4).equals("bonos")) {
                 updateSaldo("00:00:00", "0-00-00", "BONO");
+                return;
             }
         }
 
@@ -193,6 +207,7 @@ public class Accesibilidad extends AccessibilityService {
                     valor += " " + valores.get(7);
                     valor += " " + val;
                     updateSaldo(valor, valores.get(9), "BONO");
+                    return;
                 }
             }
         }
@@ -204,10 +219,11 @@ public class Accesibilidad extends AccessibilityService {
                 String bonos = tokenizer.nextToken();
 
                 if (bonos.equals("Bono")) {
-                    String valor = "$"+ Util.getResultText(valores.get(2));
-                    valor += " " +Util.getResultText(valores.get(4)) + " MIN " + Util.getResultText(valores.get(6)) + " SMS";
+                    String valor = "$" + Util.getResultText(valores.get(2));
+                    valor += " " + Util.getResultText(valores.get(4)) + " MIN " + Util.getResultText(valores.get(6)) + " SMS";
                     valor += " " + valores.get(8) + " MB ";
                     updateSaldo(valor, Util.getResultDate(valores.get(9)), "BONO");
+                    return;
                 }
             }
         }
@@ -218,10 +234,11 @@ public class Accesibilidad extends AccessibilityService {
                 String bonos = tokenizer.nextToken();
 
                 if (bonos.equals("Bono")) {
-                    String valor =  Util.getResultText(valores.get(1));
-                    valor += " " +Util.getResultText(valores.get(3)) + " MIN " + Util.getResultText(valores.get(5)) + " SMS";
+                    String valor = Util.getResultText(valores.get(1));
+                    valor += " " + Util.getResultText(valores.get(3)) + " MIN " + Util.getResultText(valores.get(5)) + " SMS";
                     valor += " " + valores.get(7) + " MB ";
                     updateSaldo(valor, Util.getResultDate(valores.get(8)), "BONO");
+                    return;
                 }
             }
         }
@@ -239,6 +256,7 @@ public class Accesibilidad extends AccessibilityService {
                     valor += " " + valores.get(3);
                     valor += " " + valores.get(4);
                     updateSaldo(valor, vence[0], "BONO");
+                    return;
                 }
             }
         }
@@ -253,6 +271,7 @@ public class Accesibilidad extends AccessibilityService {
                     valor += " " + valores.get(3) + " MIN " + valores.get(7) + " SMS";
                     valor += " " + valores.get(10) + " " + valores.get(11);
                     updateSaldo(valor, valores.get(5), "BONO");
+                    return;
                 }
             }
         }
@@ -267,6 +286,7 @@ public class Accesibilidad extends AccessibilityService {
                     valor += " " + valores.get(4) + " SMS";
                     valor += " " + valores.get(7) + " " + valores.get(8);
                     updateSaldo(valor, valores.get(2), "BONO");
+                    return;
                 }
             }
         }
@@ -280,6 +300,7 @@ public class Accesibilidad extends AccessibilityService {
                 String val = tokenizer.nextToken();
                 if (bonos.equals("Bono:")) {
                     updateSaldo(val, valores.get(2), "BONO");
+                    return;
                 }
             }
         }
@@ -287,6 +308,7 @@ public class Accesibilidad extends AccessibilityService {
             String valor = valores.get(1);
             valor += valores.get(2);
             updateSaldo(valor, valores.get(4), "BONO");
+            return;
         }
         if (!respuesta.equals(getString(R.string.alert_dialog_title))) {
             mostrarToast(respuesta);
@@ -322,9 +344,9 @@ public class Accesibilidad extends AccessibilityService {
 
     private String processUSSDText(List<CharSequence> eventText) {
         String s;
-        if(eventText.size()==3){
+        if (eventText.size() == 3) {
             s = String.valueOf(eventText.get(1));
-        }else{
+        } else {
             s = String.valueOf(eventText.get(0));
         }
 
