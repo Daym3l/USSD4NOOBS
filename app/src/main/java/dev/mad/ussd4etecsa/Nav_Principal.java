@@ -199,9 +199,10 @@ public class Nav_Principal extends AppCompatActivity
         refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 startService(new Intent(v.getContext(), Accesibilidad.class));
+                sharedPreferences.edit().putString("refresh", "SALDO").apply();
                 marcarNumero("222");
+
 
             }
         });
@@ -211,6 +212,7 @@ public class Nav_Principal extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startService(new Intent(v.getContext(), Accesibilidad.class));
+                sharedPreferences.edit().putString("refresh", "DATOS").apply();
                 marcarNumero("222*328");
 
             }
@@ -221,14 +223,18 @@ public class Nav_Principal extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startService(new Intent(v.getContext(), Accesibilidad.class));
+                sharedPreferences.edit().putString("refresh", "VOZ").apply();
                 marcarNumero("222*869");
 
             }
         });
+
+        //imagen Bono
         iv_bono.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startService(new Intent(v.getContext(), Accesibilidad.class));
+                sharedPreferences.edit().putString("refresh", "BONO").apply();
                 marcarNumero("222*266");
             }
         });
@@ -238,6 +244,7 @@ public class Nav_Principal extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startService(new Intent(v.getContext(), Accesibilidad.class));
+                sharedPreferences.edit().putString("refresh", "SMS").apply();
                 marcarNumero("222*767");
 
             }
@@ -529,6 +536,7 @@ public class Nav_Principal extends AppCompatActivity
                 });
                 winDialog.setNegativeButton(R.string.update, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        sharedPreferences.edit().putString("refresh", "VOZ").apply();
                         marcarNumero("222*869");
                         dialog.dismiss();
                     }
@@ -577,6 +585,7 @@ public class Nav_Principal extends AppCompatActivity
                 });
                 winDialog.setNegativeButton(R.string.update, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        sharedPreferences.edit().putString("refresh", "SMS").apply();
                         marcarNumero("222*767");
                         dialog.dismiss();
                     }
@@ -654,6 +663,7 @@ public class Nav_Principal extends AppCompatActivity
                 });
                 winDialog.setNegativeButton(R.string.update, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        sharedPreferences.edit().putString("refresh", "DATOS").apply();
                         marcarNumero("222*328");
                         dialog.dismiss();
                     }
@@ -758,34 +768,11 @@ public class Nav_Principal extends AppCompatActivity
                 tv_activo_Bono.setText("Sin Bonificación.");
                 tv_activo_Bono.setTextColor(getResources().getColor(R.color.rojo));
             } else {
-                List<String> valores = Util.convertirCadena(ussdObjetctBono.get(0).getValor());
-                if (valores.size() == 2) {
-                    bono.setText(valores.get(0) + " MIN");
-
-                    tv_activo_Bono.setText("Bono activo");
-                } else if (valores.size() == 3) {
-                    bono.setText(valores.get(0) + " + " + valores.get(1) + valores.get(2) + " de navegacion Nacional.");
-
-                    tv_activo_Bono.setText("Bono Activo");
-
-                } else if (valores.size() == 5) {
-                    bono.setText(valores.get(0) + " + " + valores.get(1) + " " + valores.get(2) + " + " + valores.get(3) + " " + valores.get(4) + " de navegacion Nacional.");
-
-                    tv_activo_Bono.setText("Bono Activo");
-
-                } else if (valores.size() == 7) {
-                    bono.setText(valores.get(0) + " + " + valores.get(1) + " " + valores.get(2) + " + " + valores.get(3) + " " + valores.get(4) + " + " + valores.get(5) + " " + valores.get(6) + " de navegacion Nacional.");
-
-                    tv_activo_Bono.setText("Bono Activo");
-                } else {
-                    bono.setText(valores.get(0) + " de navegacion Nacional");
-
-                    tv_activo_Bono.setText("Bono Activo");
-                }
-
+                String valores = ussdObjetctBono.get(0).getValor();
+                bono.setText(valores);
+                tv_activo_Bono.setText("Bono activo");
                 venceBono.setText(ussdObjetctBono.get(0).getFechavencimiento());
                 tv_activo_Bono.setTextColor(getResources().getColor(R.color.verde));
-
             }
 
             // Servicio de VOZ

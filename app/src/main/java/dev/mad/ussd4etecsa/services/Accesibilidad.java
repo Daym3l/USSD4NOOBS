@@ -29,6 +29,11 @@ import dev.mad.ussd4etecsa.models.Tables.DatAmigo;
 import dev.mad.ussd4etecsa.models.Tables.DatUssd;
 import dev.mad.ussd4etecsa.bd_config.DatabaseHelper;
 import dev.mad.ussd4etecsa.R;
+import dev.mad.ussd4etecsa.updateSaldo.Bono;
+import dev.mad.ussd4etecsa.updateSaldo.Datos;
+import dev.mad.ussd4etecsa.updateSaldo.Saldo;
+import dev.mad.ussd4etecsa.updateSaldo.Sms;
+import dev.mad.ussd4etecsa.updateSaldo.Voz;
 import dev.mad.ussd4etecsa.utiles.Util;
 
 /**
@@ -90,248 +95,43 @@ public class Accesibilidad extends AccessibilityService {
     }
 
     private void procesarRespuesta(String respuesta) throws SQLException {
-
+        String test = "Bono->vence: $64.04->04-11-20. Datos 1.872 MB->04-11-20. MIN 00:46:11->04-11-20. SMS 50->04-11-20. Datos.cu 225 MB->04-11-20";
+        SharedPreferences sharedPreferences = getSharedPreferences("ussdPreferences", Context.MODE_PRIVATE);
+        String option = sharedPreferences.getString("refresh", "");
         List<String> valores = convertirCadena(respuesta);
-        if (valores.size() > 6) {
-            if (valores.get(0).equals("Saldo")) {
-                updateSaldo(valores.get(1).replace(',', ' '), valores.get(7), "SALDO");
-                return;
-            }
-            if (valores.get(4).equals("MIN")) {
-                updateSaldo(valores.get(3), valores.get(7), "VOZ");
-                return;
-            }
-            if (valores.get(4).equals("SMS") && !valores.get(0).equals("Bono:Min.") && !valores.get(0).equals("Bono->vence:")) {
-                updateSaldo(valores.get(3), valores.get(7), "SMS");
-                return;
 
+        switch (option) {
+            case "SALDO": {
+                Saldo saldo = new Saldo(this);
+                saldo.UpdateSaldo(valores);
+                break;
             }
-            if ((valores.get(5).equals("KB")) || (valores.get(5).equals("MB")) || (valores.get(5).equals("GB"))) {
-                updateSaldo(valores.get(4) + " " + valores.get(5), valores.get(7), "BOLSA");
-                return;
+            case "VOZ": {
+                Voz voz = new Voz(this);
+                voz.UpdateSaldo(valores);
+                break;
             }
-            if (((valores.get(4).equals("KB")) || (valores.get(4).equals("MB")) || (valores.get(4).equals("GB"))) && valores.size() > 7) {
-                if (valores.get(2).equals("Paquetes:")) {
-                    if (valores.get(6).equals("KB") || valores.get(6).equals("MB") || valores.get(6).equals("GB")) {
-                        String texto = valores.get(3) + " " + valores.get(4) + " " + valores.get(5) + " " + valores.get(6) + " " + valores.get(7) + " " + valores.get(8);
-                        updateSaldo(texto, valores.get(10), "BOLSA");
-                        return;
-                    } else {
-                        updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(6), "BOLSA");
-                        return;
-                    }
-
-                } else {
-                    updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(7), "BOLSA");
-                    return;
-                }
+            case "SMS": {
+                Sms sms = new Sms(this);
+                sms.UpdateSaldo(valores);
+                break;
             }
-            if (((valores.get(5).equals("KB")) || (valores.get(5).equals("MB")) || (valores.get(5).equals("GB"))) && valores.size() > 7) {
-                if (valores.get(3).equals("Paquetes:")) {
-                    if (valores.get(7).equals("KB") || valores.get(7).equals("MB") || valores.get(7).equals("GB")) {
-                        String texto = valores.get(4) + " " + valores.get(5) + " " + valores.get(6) + " " + valores.get(7) + " " + valores.get(8) + " " + valores.get(9);
-                        updateSaldo(texto, valores.get(11), "BOLSA");
-                        return;
-                    } else {
-                        updateSaldo(valores.get(4) + " " + valores.get(5), valores.get(7), "BOLSA");
-                        return;
-                    }
-
-                } else {
-                    updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(7), "BOLSA");
-                    return;
-                }
+            case "DATOS": {
+                Datos datos = new Datos(this);
+                datos.UpdateSaldo(valores);
+                break;
             }
-
-            if (valores.get(4).equals("MB.")) {
-                updateSaldo("0" + " " + "MB", "0", "BOLSA");
-                return;
+            case "BONO": {
+                Bono bono = new Bono(this);
+                bono.UpdateSaldo(valores);
+                break;
             }
-            if (valores.get(4).equals("Minutos")) {
-                updateSaldo(valores.get(3), valores.get(7), "VOZ");
-                return;
-            }
-            if (valores.get(6).equals("SMS.")) {
-                updateSaldo("0", "0", "SMS");
-                return;
-            }
-            if (valores.get(4).equals("Minutos") && valores.get(9).equals("nueva")) {
-                updateSaldo("0:00:00 ", "0", "VOZ");
-                return;
-            }
-            if (valores.get(4).equals("oferta.")) {
-                updateSaldo("0.00", "0", "BOLSA");
-                return;
-            }
-
-            if (valores.get(0).equals("Bono:Min.")) {
-                String valor = valores.get(1);
-                valor += " " + valores.get(5);
-                updateSaldo(valor, valores.get(3), "BONO");
-                return;
-            }
-
-            if (valores.get(4).equals("Amigos:")) {
-                dbHelper = OpenHelperManager.getHelper(this, DatabaseHelper.class);
-                RuntimeExceptionDao<DatAmigo, Integer> datPlanAmigoses = this.dbHelper.getAmigoruntimeExceptionDao();
-                DeleteBuilder<DatAmigo, Integer> deleteBuilder = datPlanAmigoses.deleteBuilder();
-                deleteBuilder.delete();
-                for (int i = 5; i < valores.size(); i++) {
-                    DatAmigo amigo = new DatAmigo(valores.get(i));
-                    datPlanAmigoses.create(amigo);
-                }
-
+            default: {
+                mostrarToast(respuesta);
             }
         }
-        if (valores.size() == 9) {
-            if (valores.get(8).equals("consultar.")) {
-                SharedPreferences sharedPreferences = getSharedPreferences("ussdPreferences", Context.MODE_PRIVATE);
-                sharedPreferences.edit().putBoolean("amigos", false).commit();
-            }
-        }
-        if (valores.size() == 6) {
-            if (valores.get(4).equals("bonos")) {
-                updateSaldo("00:00:00", "0-00-00", "BONO");
-                return;
-            }
-        }
-
-        if (valores.size() == 10) {
-            String bono = valores.get(0);
-            StringTokenizer tokenizer = new StringTokenizer(bono, "$");
-            if (tokenizer.countTokens() > 1) {
-                String bonos = tokenizer.nextToken();
-                String val = tokenizer.nextToken();
-                if (bonos.equals("Bono:")) {
-                    String valor = valores.get(3);
-                    valor += " " + valores.get(7);
-                    valor += " " + val;
-                    updateSaldo(valor, valores.get(9), "BONO");
-                    return;
-                }
-            }
-        }
-
-        if (valores.size() == 10 && valores.get(0).equals("Bono->vence:")) {
-            String bono = valores.get(0);
-            StringTokenizer tokenizer = new StringTokenizer(bono, "->");
-            if (tokenizer.countTokens() > 1) {
-                String bonos = tokenizer.nextToken();
-
-                if (bonos.equals("Bono")) {
-                    String valor = "$" + Util.getResultText(valores.get(2));
-                    valor += " " + Util.getResultText(valores.get(4)) + " MIN " + Util.getResultText(valores.get(6)) + " SMS";
-                    valor += " " + valores.get(8) + " MB ";
-                    updateSaldo(valor, Util.getResultDate(valores.get(9)), "BONO");
-                    return;
-                }
-            }
-        }
-        if (valores.size() == 9 && valores.get(0).equals("Bono->vence:")) {
-            String bono = valores.get(0);
-            StringTokenizer tokenizer = new StringTokenizer(bono, "->");
-            if (tokenizer.countTokens() > 1) {
-                String bonos = tokenizer.nextToken();
-
-                if (bonos.equals("Bono")) {
-                    String valor = Util.getResultText(valores.get(1));
-                    valor += " " + Util.getResultText(valores.get(3)) + " MIN " + Util.getResultText(valores.get(5)) + " SMS";
-                    valor += " " + valores.get(7) + " MB ";
-                    updateSaldo(valor, Util.getResultDate(valores.get(8)), "BONO");
-                    return;
-                }
-            }
-        }
-
-        if (valores.size() == 7) {
-            String bono = valores.get(0);
-            String venceData = valores.get(2);
-            String[] vence = venceData.split("\\.");
-            StringTokenizer tokenizer = new StringTokenizer(bono, "$");
-            if (tokenizer.countTokens() > 1) {
-                String bonos = tokenizer.nextToken();
-                String val = tokenizer.nextToken();
-                if (bonos.equals("Bono:")) {
-                    String valor = "$" + val;
-                    valor += " " + valores.get(3);
-                    valor += " " + valores.get(4);
-                    updateSaldo(valor, vence[0], "BONO");
-                    return;
-                }
-            }
-        }
-        if (valores.size() == 14) {
-            String bono = valores.get(0);
-            StringTokenizer tokenizer = new StringTokenizer(bono, "$");
-            if (tokenizer.countTokens() > 1) {
-                String bonos = tokenizer.nextToken();
-                String val = tokenizer.nextToken();
-                if (bonos.equals("Bono:")) {
-                    String valor = "$" + val;
-                    valor += " " + valores.get(3) + " MIN " + valores.get(7) + " SMS";
-                    valor += " " + valores.get(10) + " " + valores.get(11);
-                    updateSaldo(valor, valores.get(5), "BONO");
-                    return;
-                }
-            }
-        }
-        if (valores.size() == 11) {
-            String bono = valores.get(0);
-            StringTokenizer tokenizer = new StringTokenizer(bono, "$");
-            if (tokenizer.countTokens() > 1) {
-                String bonos = tokenizer.nextToken();
-                String val = tokenizer.nextToken();
-                if (bonos.equals("Bono:")) {
-                    String valor = "$" + val;
-                    valor += " " + valores.get(4) + " SMS";
-                    valor += " " + valores.get(7) + " " + valores.get(8);
-                    updateSaldo(valor, valores.get(2), "BONO");
-                    return;
-                }
-            }
-        }
-
-
-        if (valores.size() == 3) {
-            String bono = valores.get(0);
-            StringTokenizer tokenizer = new StringTokenizer(bono, "$");
-            if (tokenizer.countTokens() > 1) {
-                String bonos = tokenizer.nextToken();
-                String val = tokenizer.nextToken();
-                if (bonos.equals("Bono:")) {
-                    updateSaldo(val, valores.get(2), "BONO");
-                    return;
-                }
-            }
-        }
-        if (valores.size() == 5 && valores.get(0).equals("Bono:Datos.cu")) {
-            String valor = valores.get(1);
-            valor += valores.get(2);
-            updateSaldo(valor, valores.get(4), "BONO");
-            return;
-        }
-        if (!respuesta.equals(getString(R.string.alert_dialog_title))) {
-            mostrarToast(respuesta);
-        }
-
-
     }
 
-    public void updateSaldo(String valor, String vence, String opcion) throws SQLException {
-
-        dbHelper = OpenHelperManager.getHelper(this, DatabaseHelper.class);
-        RuntimeExceptionDao<DatUssd, Integer> ussdDao = dbHelper.getUssdRuntimeDao();
-        UpdateBuilder<DatUssd, Integer> updateBuilder = ussdDao.updateBuilder();
-        valor = (valor.equals("de")) ? "0" : valor;
-        vence = (vence.equals("plan.")) ? "0" : vence;
-        vence = (vence.equals("hoy.")) ? "1" : vence;
-        updateBuilder.where().eq("name", opcion);
-        updateBuilder.updateColumnValue("valor", valor);
-        updateBuilder.updateColumnValue("fechavencimiento", vence);
-        updateBuilder.update();
-
-
-    }
 
     private List<String> convertirCadena(String text) {
         List<String> valores = new ArrayList<>();
@@ -349,7 +149,6 @@ public class Accesibilidad extends AccessibilityService {
         } else {
             s = String.valueOf(eventText.get(0));
         }
-
         return s;
     }
 

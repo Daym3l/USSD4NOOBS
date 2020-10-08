@@ -157,69 +157,75 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cv_notification">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/tv_auto_title"
-                    android:layout_alignStart="@+id/tv_auto_title"
-                    android:layout_below="@+id/tv_auto_title"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="@string/config_Automata_text"
-                    android:textColor="@color/cardview_dark_background"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/tv_auto_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="@string/config_Automata_title"
-                    android:textAllCaps="true"
-                    android:textColor="@color/primary_dark"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="6dp"
-                    android:layout_marginTop="85dp"
+                    android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <Switch
-                        android:id="@+id/cbx_config_datos"
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/tv_auto_title"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="@string/config_chbox_datos"
-                        android:textColor="@color/cardview_dark_background"
-                        android:textSize="16sp" />
-
-                    <Switch
-                        android:id="@+id/cbx_config_call"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
                         android:layout_marginTop="8dp"
                         android:fontFamily="sans-serif-condensed"
-                        android:text="@string/config_chbox_call"
+                        android:text="@string/config_Automata_title"
+                        android:textAllCaps="true"
+                        android:textColor="@color/primary_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_c_test"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/config_Automata_text"
                         android:textColor="@color/cardview_dark_background"
                         android:textSize="16sp" />
 
-                    <Switch
-                        android:id="@+id/cbx_config_sms"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
                         android:layout_marginTop="8dp"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="@string/config_chbox_sms"
-                        android:textColor="@color/cardview_dark_background"
-                        android:textSize="16sp" />
+                        android:layout_marginRight="6dp"
+                        android:orientation="vertical">
 
+                        <Switch
+                            android:id="@+id/cbx_config_datos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/config_chbox_datos"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16sp" />
+
+                        <Switch
+                            android:id="@+id/cbx_config_call"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/config_chbox_call"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16sp" />
+
+                        <Switch
+                            android:id="@+id/cbx_config_sms"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/config_chbox_sms"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
                 </LinearLayout>
 
             </RelativeLayout>
