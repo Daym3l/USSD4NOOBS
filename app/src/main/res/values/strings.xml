@@ -34,7 +34,7 @@
 
     <string name="about_us_version">Versión</string>
     <string name="about_us_reporte">Colaborar</string>
-    <string name="about_us_github_dir">https://gitlab.com/Daym3l/USSD4ETECSA</string>
+    <string name="about_us_github_dir">https://github.com/Daym3l/USSD4NOOBS.git</string>
     <string name="about_us_contactenos">Contactenos</string>
     <string name="about_us_mail">daymel537@gmail.com</string>
     <string name="about_us_descrip">Agradecer a todas las personas que de una forma u otra han contribuido con el desarrollo de esta aplicación.</string>
@@ -88,6 +88,8 @@
     <string name="fecha">fecha</string>
     <string name="voz">Voz</string>
     <string name="_00_00_00_min">00:00:00 Min</string>
+    <string name="logo_mio">logo_mio</string>
+    <string name="logo">Logo</string>
 
 
 </resources>

@@ -55,7 +55,7 @@ import net.frederico.showtipsview.ShowTipsViewInterface;
 import java.util.List;
 
 import dev.mad.ussd4etecsa.aboutUS.AboutUsFragment;
-import dev.mad.ussd4etecsa.amigos.AmigosFrafment;
+
 import dev.mad.ussd4etecsa.settings.ConfigActivity;
 import dev.mad.ussd4etecsa.bd_config.DatabaseHelper;
 import dev.mad.ussd4etecsa.models.Tables.DatUssd;
@@ -65,6 +65,7 @@ import dev.mad.ussd4etecsa.services.GeneralService;
 import dev.mad.ussd4etecsa.services.UssdService;
 import dev.mad.ussd4etecsa.transferencia.TransferenciaFragment;
 import dev.mad.ussd4etecsa.utiles.Constantes;
+
 import dev.mad.ussd4etecsa.utiles.Util;
 
 
@@ -111,9 +112,9 @@ public class Nav_Principal extends AppCompatActivity
     private static final String TAG_TRANFERENCIA = "TRANSFERENCIAS";
     private static final String TAG_AMIGOS = "AMIGOS";
 
-    private static final String[] ARRAY_VOZ = {"5 Minutos / $1.50", "10 Minutos / $2.90", "15 Minutos / $4.20", "25 Minutos / $6.50", "40 Minutos / $10.00"};
-    private static final String[] ARRAY_SMS = {"10 Mensajes / $0.70", "20 Mensajes / $1.30", "35 Mensajes / $2.10", "45 Mensajes / $2.45"};
-    private static final String[] ARRAY_DATOS = {"Bolsa Nauta", "Tarifa por Consumo", "600MB de Internet / $7", " 1GB de Internet/ $10", "2.5GB de Internet / $20", "4GB de Internet / $30"};
+    private static final String[] ARRAY_VOZ = {"$1.50 - 5 Minutos", "$2.90 - 10 Minutos", "$4.20 - 15 Minutos", " $6.50 - 25 Minutos", "$10.00 - 40 Minutos"};
+    private static final String[] ARRAY_SMS = {"$0.70 - 10 Mensajes", "$1.30 - 20 Mensajes", "$2.10 - 35 Mensajes", "$2.45 - 45 Mensajes"};
+    private static final String[] ARRAY_DATOS = {"Tarifa por Consumo", "$1 - Bolsa de Correo", "$1 - Bolsa Diaria LTE + 200 MB", "$5 - 400 MB + 500 MB(LTE)", "$7 - 600 MB + 800 MB(LTE)", "$10 - 1 GB + 1.5 GB(LTE)", "$20 - 2.5 GB + 3 GB(LTE)", "$30 - 4 GB + 5 GB(LTE)", "$4 - 1 GB(LTE)", "$8 - 2.5 GB(LTE)", "$45 - 14 GB(LTE)"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -198,9 +199,10 @@ public class Nav_Principal extends AppCompatActivity
         refresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 startService(new Intent(v.getContext(), Accesibilidad.class));
+                sharedPreferences.edit().putString("refresh", "SALDO").apply();
                 marcarNumero("222");
+
 
             }
         });
@@ -210,6 +212,7 @@ public class Nav_Principal extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startService(new Intent(v.getContext(), Accesibilidad.class));
+                sharedPreferences.edit().putString("refresh", "DATOS").apply();
                 marcarNumero("222*328");
 
             }
@@ -220,14 +223,18 @@ public class Nav_Principal extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startService(new Intent(v.getContext(), Accesibilidad.class));
+                sharedPreferences.edit().putString("refresh", "VOZ").apply();
                 marcarNumero("222*869");
 
             }
         });
+
+        //imagen Bono
         iv_bono.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startService(new Intent(v.getContext(), Accesibilidad.class));
+                sharedPreferences.edit().putString("refresh", "BONO").apply();
                 marcarNumero("222*266");
             }
         });
@@ -237,6 +244,7 @@ public class Nav_Principal extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startService(new Intent(v.getContext(), Accesibilidad.class));
+                sharedPreferences.edit().putString("refresh", "SMS").apply();
                 marcarNumero("222*767");
 
             }
@@ -459,9 +467,6 @@ public class Nav_Principal extends AppCompatActivity
             fragmentGestor(new AboutUsFragment(), TAG_ABOUT);
 
 
-        } else if (id == R.id.nav_amigos) {
-            fragmentGestor(new AmigosFrafment(), TAG_AMIGOS);
-            toolbar.setTitle(getString(R.string.amigos));
         } else if (id == R.id.nav_help) {
             helpApp();
         }
@@ -531,6 +536,7 @@ public class Nav_Principal extends AppCompatActivity
                 });
                 winDialog.setNegativeButton(R.string.update, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        sharedPreferences.edit().putString("refresh", "VOZ").apply();
                         marcarNumero("222*869");
                         dialog.dismiss();
                     }
@@ -579,6 +585,7 @@ public class Nav_Principal extends AppCompatActivity
                 });
                 winDialog.setNegativeButton(R.string.update, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        sharedPreferences.edit().putString("refresh", "SMS").apply();
                         marcarNumero("222*767");
                         dialog.dismiss();
                     }
@@ -595,27 +602,47 @@ public class Nav_Principal extends AppCompatActivity
 
                         switch (which) {
                             case 0: {
-                                valor[0] = "133*1*2";
-                                break;
-                            }
-                            case 1: {
                                 valor[0] = "133*1*1";
                                 break;
                             }
+                            case 1: {
+                                valor[0] = "133*1*2";
+                                break;
+                            }
                             case 2: {
-                                valor[0] = "133*1*3*1";
+                                valor[0] = "133*1*3";
                                 break;
                             }
                             case 3: {
-                                valor[0] = "133*1*3*2";
+                                valor[0] = "133*1*4*1";
                                 break;
                             }
                             case 4: {
-                                valor[0] = "133*1*3*3";
+                                valor[0] = "133*1*4*2";
                                 break;
                             }
                             case 5: {
-                                valor[0] = "133*1*3*4";
+                                valor[0] = "133*1*4*3";
+                                break;
+                            }
+                            case 6: {
+                                valor[0] = "133*1*4*4";
+                                break;
+                            }
+                            case 7: {
+                                valor[0] = "133*1*4*5";
+                                break;
+                            }
+                            case 8: {
+                                valor[0] = "133*1*5*1";
+                                break;
+                            }
+                            case 9: {
+                                valor[0] = "133*1*5*2";
+                                break;
+                            }
+                            case 10: {
+                                valor[0] = "133*1*5*3";
                                 break;
                             }
 
@@ -636,6 +663,7 @@ public class Nav_Principal extends AppCompatActivity
                 });
                 winDialog.setNegativeButton(R.string.update, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        sharedPreferences.edit().putString("refresh", "DATOS").apply();
                         marcarNumero("222*328");
                         dialog.dismiss();
                     }
@@ -740,34 +768,11 @@ public class Nav_Principal extends AppCompatActivity
                 tv_activo_Bono.setText("Sin Bonificación.");
                 tv_activo_Bono.setTextColor(getResources().getColor(R.color.rojo));
             } else {
-                List<String> valores = Util.convertirCadena(ussdObjetctBono.get(0).getValor());
-                if (valores.size() == 2) {
-                    bono.setText(valores.get(0) + " MIN");
-
-                    tv_activo_Bono.setText("Bono activo");
-                } else if (valores.size() == 3) {
-                    bono.setText(valores.get(0) + " + " + valores.get(1) + valores.get(2) + " de navegacion Nacional.");
-
-                    tv_activo_Bono.setText("Bono Activo");
-
-                } else if (valores.size() == 5) {
-                    bono.setText(valores.get(0) + " + " + valores.get(1) + " " + valores.get(2) + " + " + valores.get(3) + " " + valores.get(4) + " de navegacion Nacional.");
-
-                    tv_activo_Bono.setText("Bono Activo");
-
-                } else if (valores.size() == 7) {
-                    bono.setText(valores.get(0) + " + " + valores.get(1) + " " + valores.get(2) + " + " + valores.get(3) + " " + valores.get(4) + " + " + valores.get(5) + " " + valores.get(6) + " de navegacion Nacional.");
-
-                    tv_activo_Bono.setText("Bono Activo");
-                } else {
-                    bono.setText("$" + valores.get(0));
-
-                    tv_activo_Bono.setText("Bono Activo");
-                }
-
+                String valores = ussdObjetctBono.get(0).getValor();
+                bono.setText(valores);
+                tv_activo_Bono.setText("Bono activo");
                 venceBono.setText(ussdObjetctBono.get(0).getFechavencimiento());
                 tv_activo_Bono.setTextColor(getResources().getColor(R.color.verde));
-
             }
 
             // Servicio de VOZ

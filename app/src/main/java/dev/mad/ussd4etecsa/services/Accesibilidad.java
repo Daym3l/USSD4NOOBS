@@ -29,6 +29,12 @@ import dev.mad.ussd4etecsa.models.Tables.DatAmigo;
 import dev.mad.ussd4etecsa.models.Tables.DatUssd;
 import dev.mad.ussd4etecsa.bd_config.DatabaseHelper;
 import dev.mad.ussd4etecsa.R;
+import dev.mad.ussd4etecsa.updateSaldo.Bono;
+import dev.mad.ussd4etecsa.updateSaldo.Datos;
+import dev.mad.ussd4etecsa.updateSaldo.Saldo;
+import dev.mad.ussd4etecsa.updateSaldo.Sms;
+import dev.mad.ussd4etecsa.updateSaldo.Voz;
+import dev.mad.ussd4etecsa.utiles.Util;
 
 /**
  * Created by Daymel on 25-Apr-17.
@@ -89,174 +95,45 @@ public class Accesibilidad extends AccessibilityService {
     }
 
     private void procesarRespuesta(String respuesta) throws SQLException {
-
+        String test = "Bono->vence: $64.04->04-11-20. Datos 1.872 MB->04-11-20. MIN 00:46:11->04-11-20. SMS 50->04-11-20. Datos.cu 225 MB->04-11-20";
+        mostrarToast(respuesta);
+        SharedPreferences sharedPreferences = getSharedPreferences("ussdPreferences", Context.MODE_PRIVATE);
+        String option = sharedPreferences.getString("refresh", "");
         List<String> valores = convertirCadena(respuesta);
-        if (valores.size() > 6) {
-            if (valores.get(0).equals("Saldo")) {
-                updateSaldo(valores.get(1), valores.get(6), "SALDO");
 
+        switch (option) {
+            case "SALDO": {
+                Saldo saldo = new Saldo(this);
+                saldo.UpdateSaldo(valores);
+                break;
             }
-            if (valores.get(4).equals("MIN")) {
-                updateSaldo(valores.get(3), valores.get(7), "VOZ");
-
+            case "VOZ": {
+                Voz voz = new Voz(this);
+                voz.UpdateSaldo(valores);
+                break;
             }
-            if (valores.get(4).equals("SMS") && !valores.get(0).equals("Bono:Min.")) {
-                updateSaldo(valores.get(3), valores.get(7), "SMS");
-
+            case "SMS": {
+                Sms sms = new Sms(this);
+                sms.UpdateSaldo(valores);
+                break;
             }
-            if (((valores.get(4).equals("KB")) || (valores.get(4).equals("MB")) || (valores.get(4).equals("GB"))) && valores.size() > 7) {
-                if (valores.get(2).equals("Paquetes:")) {
-                    updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(6), "BOLSA");
-                } else {
-                    updateSaldo(valores.get(3) + " " + valores.get(4), valores.get(7), "BOLSA");
-                }
+            case "DATOS": {
+                Datos datos = new Datos(this);
+                datos.UpdateSaldo(valores);
+                break;
             }
-
-            if ((valores.get(5).equals("KB")) || (valores.get(5).equals("MB")) || (valores.get(5).equals("GB"))) {
-                updateSaldo(valores.get(4) + " " + valores.get(5), valores.get(7), "BOLSA");
+            case "BONO": {
+                Bono bono = new Bono(this);
+                bono.UpdateSaldo(valores);
+                break;
             }
-
-            if (valores.get(4).equals("MB.")) {
-                updateSaldo("0" + " " + "MB", "0", "BOLSA");
-            }
-            if (valores.get(4).equals("Minutos")) {
-                updateSaldo(valores.get(3), valores.get(7), "VOZ");
-                Log.d("saldo", valores.get(3));
-            }
-            if (valores.get(6).equals("SMS.")) {
-                updateSaldo("0", "0", "SMS");
-            }
-            if (valores.get(4).equals("Minutos") && valores.get(9).equals("nueva")) {
-                updateSaldo("0:00:00 ", "0", "VOZ");
-            }
-            if (valores.get(4).equals("oferta.")) {
-                updateSaldo("0.00", "0", "BOLSA");
-            }
-
-            if (valores.get(0).equals("Bono:Min.")) {
-                String valor = valores.get(1);
-                valor += " " + valores.get(5);
-                updateSaldo(valor, valores.get(3), "BONO");
-            }
-
-            if (valores.get(4).equals("Amigos:")) {
-                dbHelper = OpenHelperManager.getHelper(this, DatabaseHelper.class);
-                RuntimeExceptionDao<DatAmigo, Integer> datPlanAmigoses = this.dbHelper.getAmigoruntimeExceptionDao();
-                DeleteBuilder<DatAmigo, Integer> deleteBuilder = datPlanAmigoses.deleteBuilder();
-                deleteBuilder.delete();
-                for (int i = 5; i < valores.size(); i++) {
-                    DatAmigo amigo = new DatAmigo(valores.get(i));
-                    datPlanAmigoses.create(amigo);
-                }
+            default: {
+                mostrarToast(respuesta);
 
             }
         }
-        if (valores.size() == 9) {
-            if (valores.get(8).equals("consultar.")) {
-                SharedPreferences sharedPreferences = getSharedPreferences("ussdPreferences", Context.MODE_PRIVATE);
-                sharedPreferences.edit().putBoolean("amigos", false).commit();
-            }
-        }
-        if (valores.size() == 6) {
-            if (valores.get(4).equals("bonos")) {
-                updateSaldo("00:00:00", "0-00-00", "BONO");
-            }
-        }
-
-        if (valores.size() == 10) {
-            String bono = valores.get(0);
-            StringTokenizer tokenizer = new StringTokenizer(bono, "$");
-            if (tokenizer.countTokens() > 1) {
-                String bonos = tokenizer.nextToken();
-                String val = tokenizer.nextToken();
-                if (bonos.equals("Bono:")) {
-                    String valor = valores.get(3);
-                    valor += " " + valores.get(7);
-                    valor += " " + val;
-                    updateSaldo(valor, valores.get(9), "BONO");
-                }
-            }
-        }
-
-        if (valores.size() == 7) {
-            String bono = valores.get(0);
-            String venceData = valores.get(2);
-            String[] vence = venceData.split("\\.");
-            StringTokenizer tokenizer = new StringTokenizer(bono, "$");
-            if (tokenizer.countTokens() > 1) {
-                String bonos = tokenizer.nextToken();
-                String val = tokenizer.nextToken();
-                if (bonos.equals("Bono:")) {
-                    String valor = "$" + val;
-                    valor += " " + valores.get(3);
-                    valor += " " + valores.get(4);
-                    updateSaldo(valor, vence[0], "BONO");
-                }
-            }
-        }
-        if (valores.size() == 14) {
-            String bono = valores.get(0);
-            StringTokenizer tokenizer = new StringTokenizer(bono, "$");
-            if (tokenizer.countTokens() > 1) {
-                String bonos = tokenizer.nextToken();
-                String val = tokenizer.nextToken();
-                if (bonos.equals("Bono:")) {
-                    String valor = "$" + val;
-                    valor += " " + valores.get(3) + " MIN " + valores.get(7) + " SMS";
-                    valor += " " + valores.get(10) + " " + valores.get(11);
-                    updateSaldo(valor, valores.get(5), "BONO");
-                }
-            }
-        }
-        if (valores.size() == 11) {
-            String bono = valores.get(0);
-            StringTokenizer tokenizer = new StringTokenizer(bono, "$");
-            if (tokenizer.countTokens() > 1) {
-                String bonos = tokenizer.nextToken();
-                String val = tokenizer.nextToken();
-                if (bonos.equals("Bono:")) {
-                    String valor = "$" + val;
-                    valor += " " + valores.get(4) + " SMS";
-                    valor += " " + valores.get(7) + " " + valores.get(8);
-                    updateSaldo(valor, valores.get(2), "BONO");
-                }
-            }
-        }
-
-
-        if (valores.size() == 3) {
-            String bono = valores.get(0);
-            StringTokenizer tokenizer = new StringTokenizer(bono, "$");
-            if (tokenizer.countTokens() > 1) {
-                String bonos = tokenizer.nextToken();
-                String val = tokenizer.nextToken();
-                if (bonos.equals("Bono:")) {
-                    updateSaldo(val, valores.get(2), "BONO");
-                }
-            }
-        }
-        if (!respuesta.equals(getString(R.string.alert_dialog_title))) {
-            mostrarToast(respuesta);
-        }
-
-
     }
 
-    public void updateSaldo(String valor, String vence, String opcion) throws SQLException {
-
-        dbHelper = OpenHelperManager.getHelper(this, DatabaseHelper.class);
-        RuntimeExceptionDao<DatUssd, Integer> ussdDao = dbHelper.getUssdRuntimeDao();
-        UpdateBuilder<DatUssd, Integer> updateBuilder = ussdDao.updateBuilder();
-        valor = (valor.equals("de")) ? "0" : valor;
-        vence = (vence.equals("plan.")) ? "0" : vence;
-        vence = (vence.equals("hoy.")) ? "1" : vence;
-        updateBuilder.where().eq("name", opcion);
-        updateBuilder.updateColumnValue("valor", valor);
-        updateBuilder.updateColumnValue("fechavencimiento", vence);
-        updateBuilder.update();
-
-
-    }
 
     private List<String> convertirCadena(String text) {
         List<String> valores = new ArrayList<>();
@@ -268,29 +145,18 @@ public class Accesibilidad extends AccessibilityService {
     }
 
     private String processUSSDText(List<CharSequence> eventText) {
-
         String s;
-        Log.i("version SDK", String.valueOf(Build.VERSION.SDK_INT));
-        if (Build.VERSION.SDK_INT == 18 || Build.VERSION.SDK_INT == 17 || Build.VERSION.SDK_INT == 16) {
+        if (eventText.size() == 3) {
             s = String.valueOf(eventText.get(1));
         } else {
             s = String.valueOf(eventText.get(0));
         }
-//        for (CharSequence s : eventText) {
-//            String text = String.valueOf(s);
-//            // Return text if text is the expected ussd response
-////
-//            if (true) {
-//                return text;
-//            }
-//        }
         return s;
     }
 
     private void mostrarToast(String text) {
         Context context = getApplicationContext();
         int duration = Toast.LENGTH_LONG;
-
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
     }
@@ -310,7 +176,6 @@ public class Accesibilidad extends AccessibilityService {
         info.feedbackType = AccessibilityServiceInfo.FEEDBACK_GENERIC;
         setServiceInfo(info);
     }
-
 
 }
 

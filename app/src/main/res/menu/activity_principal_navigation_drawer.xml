@@ -12,10 +12,6 @@
             android:icon="@drawable/ic_tranferir"
             android:title="@string/transferir" />
         <item
-            android:id="@+id/nav_amigos"
-            android:icon="@drawable/ic_group"
-            android:title="@string/amigos" />
-        <item
             android:id="@+id/nav_configuracion"
             android:icon="@drawable/ic_settings"
             android:title="@string/config" />
