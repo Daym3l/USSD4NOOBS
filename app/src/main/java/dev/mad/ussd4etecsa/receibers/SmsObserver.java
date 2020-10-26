@@ -56,7 +56,6 @@ public class SmsObserver extends ContentObserver {
 
         String id = cur.getString(cur.getColumnIndex("_id"));
 
-        final String address = cur.getString(cur.getColumnIndex("address"));
         final String body = cur.getString(cur.getColumnIndex("body"));
         final String date_sent = cur.getString(cur.getColumnIndex("date_sent"));
 
@@ -158,7 +157,7 @@ public class SmsObserver extends ContentObserver {
      * @throws SQLException
      */
     private String getValorSaldos(String accion, Context context) throws SQLException {
-        String saldoCall = "";
+        String saldoCall;
         saldoCall = ussdModel.getValor(accion, context);
         return saldoCall;
     }

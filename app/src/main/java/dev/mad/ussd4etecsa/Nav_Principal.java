@@ -106,6 +106,9 @@ public class Nav_Principal extends AppCompatActivity
     Toolbar toolbar;
     Intent intentMemoryService;
     ShowTipsView t_inicial;
+
+    TextView version;
+    String versionName = BuildConfig.VERSION_NAME;
     int p_size;
     SharedPreferences sharedPreferences;
     private static final String TAG_ABOUT = "ABOUT";
@@ -120,6 +123,7 @@ public class Nav_Principal extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal_navigation);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         sharedPreferences = getSharedPreferences("ussdPreferences", Context.MODE_PRIVATE);
@@ -160,6 +164,11 @@ public class Nav_Principal extends AppCompatActivity
         proveedor = (TextView) findViewById(R.id.tv_proveedor_name);
         intentMemoryService = new Intent(getApplicationContext(), UssdService.class);
         startService(new Intent(getApplicationContext(), GeneralService.class));
+
+        View headerView = navigationView.getHeaderView(0);
+        version = (TextView) headerView.findViewById(R.id.tv_version_header);
+        version.setText(versionName);
+
 
         /*
         Tutorial
@@ -256,7 +265,7 @@ public class Nav_Principal extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
         navigationView.setNavigationItemSelectedListener(this);
     }
 

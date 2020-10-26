@@ -95,7 +95,6 @@ public class Accesibilidad extends AccessibilityService {
     }
 
     private void procesarRespuesta(String respuesta) throws SQLException {
-        String test = "Bono->vence: $64.04->04-11-20. Datos 1.872 MB->04-11-20. MIN 00:46:11->04-11-20. SMS 50->04-11-20. Datos.cu 225 MB->04-11-20";
         mostrarToast(respuesta);
         SharedPreferences sharedPreferences = getSharedPreferences("ussdPreferences", Context.MODE_PRIVATE);
         String option = sharedPreferences.getString("refresh", "");
