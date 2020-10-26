@@ -17,18 +17,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d73bb81-f107-4212-a218-42d2b84719ab" name="Default" comment="2.7.4 - optimizations">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3d73bb81-f107-4212-a218-42d2b84719ab" name="Default" comment="2.7.6 - se arregla bono">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/Nav_Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/Nav_Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/receibers/SmsObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/receibers/SmsObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/services/Accesibilidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/services/Accesibilidad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/updateSaldo/Bono.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/updateSaldo/Bono.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_about_us.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_about_us.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_principal_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_principal_navigation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_apk/release/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/sample_apk/release/output.json" afterDir="false" />
     </list>
     <ignored path="USSD4ETECSA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,7 +54,7 @@
     <session id="-24140083">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="52" />
+          <entry key="project.closed" value="53" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="5" />
@@ -91,7 +81,7 @@
           <entry key="gradle" value="105" />
           <entry key="java" value="5229" />
           <entry key="properties" value="7" />
-          <entry key="txt" value="456" />
+          <entry key="txt" value="473" />
           <entry key="xml" value="194" />
         </counts>
       </usages-collector>
@@ -99,7 +89,7 @@
         <counts>
           <entry key="Groovy" value="105" />
           <entry key="JAVA" value="5229" />
-          <entry key="PLAIN_TEXT" value="486" />
+          <entry key="PLAIN_TEXT" value="503" />
           <entry key="Properties" value="7" />
           <entry key="XML" value="194" />
         </counts>
@@ -3390,13 +3380,6 @@
       <option name="presentableId" value="Default" />
       <updated>1493144481964</updated>
     </task>
-    <task id="LOCAL-00008" summary="tranferencia terminada&#10;">
-      <created>1510070494908</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1510070494908</updated>
-    </task>
     <task id="LOCAL-00009" summary="tranferencia lista terminada&#10;">
       <created>1510163010745</created>
       <option name="number" value="00009" />
@@ -3733,7 +3716,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602199590547</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="2.7.6 - se arregla bono">
+      <created>1603722778271</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1603722778272</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3760,7 +3750,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989339" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286334" />
-      <window_info anchor="bottom" x="1920" y="23" width="1536" height="801" id="Debug" order="3" type="WINDOWED" visible="true" weight="0.5780911" />
+      <window_info anchor="bottom" x="1920" y="23" width="1536" height="801" id="Debug" order="3" type="WINDOWED" weight="0.5780911" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -3831,7 +3821,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="-- 2.1.0" />
     <MESSAGE value="-- 2.1.1" />
     <MESSAGE value="v 2.1.1" />
     <MESSAGE value="-name&#10;-red notification" />
@@ -3856,7 +3845,8 @@
     <MESSAGE value="Notifications fixed for android 8" />
     <MESSAGE value="2.7.2 - fixed works" />
     <MESSAGE value="2.7.4 - optimizations" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.7.4 - optimizations" />
+    <MESSAGE value="2.7.6 - se arregla bono" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.7.6 - se arregla bono" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
