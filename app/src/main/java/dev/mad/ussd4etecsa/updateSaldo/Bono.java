@@ -25,11 +25,13 @@ public class Bono implements ISaldo {
         if (valores.get(4).equals("bonos")) {
             this.model.updateSaldo("00:00:00", "0-00-00", "BONO", this.context);
 
+
         }
         if (valores.get(0).equals("Bono:Min.")) {
             String valor = valores.get(1);
             valor += " " + valores.get(5);
             this.model.updateSaldo(valor, valores.get(3), "BONO", this.context);
+
 
         }
         if (valores.size() == 10) {
@@ -43,6 +45,7 @@ public class Bono implements ISaldo {
                     valor += " " + valores.get(7);
                     valor += " " + val;
                     this.model.updateSaldo(valor, valores.get(9), "BONO", this.context);
+
                 }
             }
         }
@@ -56,6 +59,7 @@ public class Bono implements ISaldo {
                     valor += " + " + Util.getResultText(valores.get(4)) + " MIN + " + Util.getResultText(valores.get(6)) + " SMS";
                     valor += " + " + valores.get(8) + " MB de navegación nacional";
                     this.model.updateSaldo(valor, Util.getResultDate(valores.get(9)), "BONO", this.context);
+
                 }
             }
         }
@@ -68,6 +72,7 @@ public class Bono implements ISaldo {
                     String valor = Util.getResultText(valores.get(1));
                     valor += " + " + Util.getResultText(valores.get(3)) + " MIN + " + Util.getResultText(valores.get(5)) + " SMS";
                     this.model.updateSaldo(valor, Util.getResultDate(valores.get(5)), "BONO", this.context);
+
                 }
             }
         }
@@ -80,6 +85,21 @@ public class Bono implements ISaldo {
                     String valor = Util.getResultText(valores.get(1));
                     valor += " + " + Util.getResultText(valores.get(3)) + " MIN + " + Util.getResultText(valores.get(5)) + " SMS";
                     valor += " + " + valores.get(7) + " MB de navegación nacional";
+                    this.model.updateSaldo(valor, Util.getResultDate(valores.get(8)), "BONO", this.context);
+
+                }
+            }
+        }
+        if (valores.size() == 12 && valores.get(0).equals("Bono->vence:")) {
+            String bono = valores.get(0);
+            StringTokenizer tokenizer = new StringTokenizer(bono, "->");
+            if (tokenizer.countTokens() > 1) {
+                String bonos = tokenizer.nextToken();
+                if (bonos.equals("Bono")) {
+                    String valor = Util.getResultText(valores.get(1));
+                    valor += " + " + Util.getResultText(valores.get(6)) + " MIN + " + Util.getResultText(valores.get(8)) + " SMS";
+                    valor += " + " + valores.get(3) + " " + Util.getResultText(valores.get(4));
+                    valor += " + " + valores.get(10) + " MB de navegación nacional";
                     this.model.updateSaldo(valor, Util.getResultDate(valores.get(8)), "BONO", this.context);
 
                 }
