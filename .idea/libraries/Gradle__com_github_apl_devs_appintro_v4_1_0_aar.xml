@@ -3,10 +3,14 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10.1-all/caches/transforms-1/files-1.1/jetified-appintro-v4.1.0.aar/c2794eb68fc3b928aacf3eda95f274a4/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10.1-all/caches/transforms-1/files-1.1/jetified-appintro-v4.1.0.aar/c2794eb68fc3b928aacf3eda95f274a4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/787af34364b9205af2d1da72d95b90a0/jetified-appintro-v4.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/787af34364b9205af2d1da72d95b90a0/jetified-appintro-v4.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/787af34364b9205af2d1da72d95b90a0/jetified-appintro-v4.1.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10.1-all/caches/modules-2/files-2.1/com.github.apl-devs/appintro/v4.1.0/eea80f6a419f2a91cace35b2696435a5d946d729/appintro-v4.1.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.apl-devs/appintro/v4.1.0/eea80f6a419f2a91cace35b2696435a5d946d729/appintro-v4.1.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -115,9 +115,19 @@ public class Nav_Principal extends AppCompatActivity
     private static final String TAG_TRANFERENCIA = "TRANSFERENCIAS";
     private static final String TAG_AMIGOS = "AMIGOS";
 
-    private static final String[] ARRAY_VOZ = {"$1.50 - 5 Minutos", "$2.90 - 10 Minutos", "$4.20 - 15 Minutos", " $6.50 - 25 Minutos", "$10.00 - 40 Minutos"};
-    private static final String[] ARRAY_SMS = {"$0.70 - 10 Mensajes", "$1.30 - 20 Mensajes", "$2.10 - 35 Mensajes", "$2.45 - 45 Mensajes"};
-    private static final String[] ARRAY_DATOS = {"Tarifa por Consumo", "$1 - Bolsa de Correo", "$1 - Bolsa Diaria LTE + 200 MB", "$5 - 400 MB + 500 MB(LTE)", "$7 - 600 MB + 800 MB(LTE)", "$10 - 1 GB + 1.5 GB(LTE)", "$20 - 2.5 GB + 3 GB(LTE)", "$30 - 4 GB + 5 GB(LTE)", "$4 - 1 GB(LTE)", "$8 - 2.5 GB(LTE)", "$45 - 14 GB(LTE)"};
+    private static final String[] ARRAY_VOZ = {"$37.5 - 5 Minutos", "$72.5 - 10 Minutos", "$105.00 - 15 Minutos", "$162.5 - 25 Minutos", "$250.00 - 40 Minutos"};
+    private static final String[] ARRAY_SMS = {"$17.50 - 10 Mensajes", "$32.50 - 20 Mensajes", "$52.50 - 35 Mensajes", "$62.50 - 45 Mensajes"};
+    private static final String[] ARRAY_DATOS = {"Tarifa por Consumo",
+            "$25 - Bolsa de Correo",
+            "$25 - Bolsa LTE + 200 MB",
+            "$125 - 400 MB + 500 MB(LTE)",
+            "$175 - 600 MB + 800 MB(LTE)",
+            "$250 - 1 GB + 1.5 GB(LTE)",
+            "$500 - 2.5 GB + 3 GB(LTE)",
+            "$750 - 4 GB + 5 GB(LTE)",
+            "$100 - 1 GB(LTE)",
+            "$200 - 2.5 GB(LTE)",
+            "$1125 - 4 GB + 10 GB(LTE)"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -766,19 +776,19 @@ public class Nav_Principal extends AppCompatActivity
             RuntimeExceptionDao<DatUssd, Integer> ussdDao = dbHelper.getUssdRuntimeDao();
             List<DatUssd> ussdObjetctSaldo = ussdDao.queryForEq("name", "SALDO");
             List<DatUssd> ussdObjetctBono = ussdDao.queryForEq("name", "BONO");
-            saldo.setText(ussdObjetctSaldo.get(0).getValor());
+            saldo.setText('$' + ussdObjetctSaldo.get(0).getValor());
             venceSaldo.setText(ussdObjetctSaldo.get(0).getFechavencimiento() + " ");
 
 
             // Servicio de Bono
             if (ussdObjetctBono.get(0).getValor().equals("00:00:00") || ussdObjetctBono.get(0).getValor().equals("0.00")) {
-                bono.setText(ussdObjetctBono.get(0).getValor() + " MIN");
+                bono.setText('$' + ussdObjetctBono.get(0).getValor() + " MIN");
                 venceBono.setText(ussdObjetctBono.get(0).getFechavencimiento());
                 tv_activo_Bono.setText("Sin Bonificación.");
                 tv_activo_Bono.setTextColor(getResources().getColor(R.color.rojo));
             } else {
                 String valores = ussdObjetctBono.get(0).getValor();
-                bono.setText(valores);
+                bono.setText('$' + valores);
                 tv_activo_Bono.setText("Bono activo");
                 venceBono.setText(ussdObjetctBono.get(0).getFechavencimiento());
                 tv_activo_Bono.setTextColor(getResources().getColor(R.color.verde));

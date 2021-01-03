@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 30
     defaultConfig {
         applicationId "dev.mad.ussd4etecsa"
         minSdkVersion 23
-        targetSdkVersion 28
-        versionCode 276
-        versionName "2.7.6"
+        targetSdkVersion 30
+        versionCode 280
+        versionName "2.8.0"
 
     }
     lintOptions {

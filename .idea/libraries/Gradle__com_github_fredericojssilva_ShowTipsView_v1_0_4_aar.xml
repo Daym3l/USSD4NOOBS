@@ -3,10 +3,16 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10.1-all/caches/transforms-1/files-1.1/ShowTipsView-v1.0.4.aar/f190058531950aedb7fedc306af7567e/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10.1-all/caches/transforms-1/files-1.1/ShowTipsView-v1.0.4.aar/f190058531950aedb7fedc306af7567e/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fec8275cdd6240c9b143203222c7247b/jetified-ShowTipsView-v1.0.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fec8275cdd6240c9b143203222c7247b/jetified-ShowTipsView-v1.0.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fec8275cdd6240c9b143203222c7247b/jetified-ShowTipsView-v1.0.4/jars/classes.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.fredericojssilva/ShowTipsView/v1.0.4/3d26fadbda468d7717048e79714bda0fcc717a2e/ShowTipsView-v1.0.4-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.10.1-all/caches/modules-2/files-2.1/com.github.fredericojssilva/ShowTipsView/v1.0.4/231795c6f843ab2699e082c40c146829bb26796d/ShowTipsView-v1.0.4-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.fredericojssilva/ShowTipsView/v1.0.4/231795c6f843ab2699e082c40c146829bb26796d/ShowTipsView-v1.0.4-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
