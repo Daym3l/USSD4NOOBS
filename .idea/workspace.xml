@@ -35,33 +35,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d73bb81-f107-4212-a218-42d2b84719ab" name="Default" comment="2.7.6 - se arregla bono">
-      <change afterPath="$PROJECT_DIR$/sample_apk/release/output-metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__Daymel_Documents_DESARROLLO_www_ANDROID_AndroidStudioProjects_USSD4NOOBS_app_libs_ormLite_ormlite_android_5_0_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__Daymel_Documents_DESARROLLO_www_ANDROID_AndroidStudioProjects_USSD4NOOBS_app_libs_ormLite_ormlite_android_5_0_javadoc_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___D__Daymel_Documents_DESARROLLO_www_ANDROID_AndroidStudioProjects_USSD4NOOBS_app_libs_ormLite_ormlite_core_5_0_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_android_28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_beta01_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_beta01_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_1_1_2_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_beta01_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_beta01_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_media_media_1_0_0_beta01_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_media_media_1_0_0_beta01_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_beta01_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_beta01_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_0_0_beta01_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_0_0_beta01_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_apl_devs_appintro_v4_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_apl_devs_appintro_v4_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_clans_fab_1_6_4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_clans_fab_1_6_4_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_fredericojssilva_ShowTipsView_v1_0_4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_fredericojssilva_ShowTipsView_v1_0_4_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_beta01_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_beta01_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__me_drakeet_materialdialog_library_1_2_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__me_drakeet_materialdialog_library_1_2_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3d73bb81-f107-4212-a218-42d2b84719ab" name="Default" comment="2.8.0 - se cambian los precios a MN">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/Nav_Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/Nav_Principal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/updateSaldo/Bono.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/updateSaldo/Bono.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample_apk/release/output-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/sample_apk/release/output-metadata.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -394,13 +372,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493144481964</updated>
-    </task>
-    <task id="LOCAL-00009" summary="tranferencia lista terminada&#10;">
-      <created>1510163010745</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1510163010745</updated>
     </task>
     <task id="LOCAL-00010" summary="v 2.0.1">
       <created>1510163476166</created>
@@ -738,7 +709,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603722778272</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="2.8.0 - se cambian los precios a MN">
+      <created>1609706346952</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1609706346953</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TodoView">
@@ -784,7 +762,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="-- 2.1.1" />
     <MESSAGE value="v 2.1.1" />
     <MESSAGE value="-name&#10;-red notification" />
     <MESSAGE value="v2.1.2" />
@@ -809,7 +786,8 @@
     <MESSAGE value="2.7.2 - fixed works" />
     <MESSAGE value="2.7.4 - optimizations" />
     <MESSAGE value="2.7.6 - se arregla bono" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.7.6 - se arregla bono" />
+    <MESSAGE value="2.8.0 - se cambian los precios a MN" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.8.0 - se cambian los precios a MN" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -829,42 +807,46 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="66" y="85" width="1720" height="857" key="AVDManager/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1609272778389" />
-    <state width="1876" height="290" key="GridCell.Tab.0.bottom" timestamp="1609277835516">
+    <state width="1876" height="290" key="GridCell.Tab.0.bottom" timestamp="1610055929342">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.0.bottom/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1609277835516" />
-    <state width="1876" height="290" key="GridCell.Tab.0.center" timestamp="1609277835516">
+    <state width="1876" height="290" key="GridCell.Tab.0.bottom/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929342" />
+    <state width="1876" height="290" key="GridCell.Tab.0.center" timestamp="1610055929341">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.0.center/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1609277835516" />
-    <state width="1876" height="290" key="GridCell.Tab.0.left" timestamp="1609277835516">
+    <state width="1876" height="290" key="GridCell.Tab.0.center/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929341" />
+    <state width="1876" height="290" key="GridCell.Tab.0.left" timestamp="1610055929341">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.0.left/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1609277835516" />
-    <state width="1876" height="290" key="GridCell.Tab.0.right" timestamp="1609277835516">
+    <state width="1876" height="290" key="GridCell.Tab.0.left/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929341" />
+    <state width="1876" height="290" key="GridCell.Tab.0.right" timestamp="1610055929342">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.0.right/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1609277835516" />
-    <state width="1876" height="290" key="GridCell.Tab.1.bottom" timestamp="1609277835517">
+    <state width="1876" height="290" key="GridCell.Tab.0.right/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929342" />
+    <state width="1876" height="290" key="GridCell.Tab.1.bottom" timestamp="1610055929343">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.1.bottom/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1609277835517" />
-    <state width="1876" height="290" key="GridCell.Tab.1.center" timestamp="1609277835517">
+    <state width="1876" height="290" key="GridCell.Tab.1.bottom/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929343" />
+    <state width="1876" height="290" key="GridCell.Tab.1.center" timestamp="1610055929342">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.1.center/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1609277835517" />
-    <state width="1876" height="290" key="GridCell.Tab.1.left" timestamp="1609277835517">
+    <state width="1876" height="290" key="GridCell.Tab.1.center/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929342" />
+    <state width="1876" height="290" key="GridCell.Tab.1.left" timestamp="1610055929342">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.1.left/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1609277835517" />
-    <state width="1876" height="290" key="GridCell.Tab.1.right" timestamp="1609277835517">
+    <state width="1876" height="290" key="GridCell.Tab.1.left/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929342" />
+    <state width="1876" height="290" key="GridCell.Tab.1.right" timestamp="1610055929343">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.1.right/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1609277835517" />
+    <state width="1876" height="290" key="GridCell.Tab.1.right/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929343" />
     <state x="461" y="198" key="SettingsEditor" timestamp="1609185606383">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="461" y="198" key="SettingsEditor/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1609185606383" />
+    <state x="560" y="291" key="Vcs.Push.Dialog.v2" timestamp="1609706350298">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="560" y="291" key="Vcs.Push.Dialog.v2/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1609706350298" />
     <state x="670" y="367" key="com.android.tools.idea.run.deployment.ModifyDeviceSetDialog" timestamp="1609705565277">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -881,6 +863,11 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/updateSaldo/Datos.java</url>
           <line>22</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/updateSaldo/Bono.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

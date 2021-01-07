@@ -22,18 +22,16 @@ public class Bono implements ISaldo {
     @Override
     public void UpdateSaldo(List<String> valores) throws SQLException {
 
-        if (valores.get(4).equals("bonos")) {
+        if (valores.size() > 4 && valores.get(4).equals("bonos")) {
             this.model.updateSaldo("00:00:00", "0-00-00", "BONO", this.context);
-
-
         }
+
         if (valores.get(0).equals("Bono:Min.")) {
             String valor = valores.get(1);
             valor += " " + valores.get(5);
             this.model.updateSaldo(valor, valores.get(3), "BONO", this.context);
-
-
         }
+
         if (valores.size() == 10) {
             String bono = valores.get(0);
             StringTokenizer tokenizer = new StringTokenizer(bono, "$");
@@ -182,6 +180,10 @@ public class Bono implements ISaldo {
             String valor = valores.get(1);
             valor += valores.get(2);
             this.model.updateSaldo(valor, valores.get(4), "BONO", this.context);
+        }
+        if (valores.size() == 4 && valores.get(0).equals("Bono->vence:")) {
+            String valor = "0.00 + " + valores.get(2) + " MB de navegación nacional";
+            this.model.updateSaldo(valor, Util.getResultDate(valores.get(3)), "BONO", this.context);
         }
 
 
