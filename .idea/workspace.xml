@@ -13,7 +13,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="BranchesTreeState">
@@ -36,10 +36,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d73bb81-f107-4212-a218-42d2b84719ab" name="Default" comment="2.8.0 - se cambian los precios a MN">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/services/NetworkChangeTileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/hplus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/lte.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/updateSaldo/Bono.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/updateSaldo/Bono.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample_apk/release/output-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/sample_apk/release/output-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +52,7 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[a31b6c42]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -77,8 +80,8 @@
         <option value="layoutResourceFile_vertical" />
         <option value="resourceFile" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -372,13 +375,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493144481964</updated>
-    </task>
-    <task id="LOCAL-00010" summary="v 2.0.1">
-      <created>1510163476166</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1510163476166</updated>
     </task>
     <task id="LOCAL-00011" summary="ajuste de IU">
       <created>1511536235299</created>
@@ -716,7 +712,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609706346953</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="bug bono fix">
+      <created>1610056641677</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1610056641677</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TodoView">
@@ -762,7 +765,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="v 2.1.1" />
     <MESSAGE value="-name&#10;-red notification" />
     <MESSAGE value="v2.1.2" />
     <MESSAGE value="* cambios en interfaz de configuración&#10;* soporte para versiones de android &gt; 6, en la consulta automatica al desconctar la red de datos." />
@@ -787,7 +789,8 @@
     <MESSAGE value="2.7.4 - optimizations" />
     <MESSAGE value="2.7.6 - se arregla bono" />
     <MESSAGE value="2.8.0 - se cambian los precios a MN" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.8.0 - se cambian los precios a MN" />
+    <MESSAGE value="bug bono fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug bono fix" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -807,46 +810,46 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="66" y="85" width="1720" height="857" key="AVDManager/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1609272778389" />
-    <state width="1876" height="290" key="GridCell.Tab.0.bottom" timestamp="1610055929342">
+    <state width="1876" height="290" key="GridCell.Tab.0.bottom" timestamp="1610056731556">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.0.bottom/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929342" />
-    <state width="1876" height="290" key="GridCell.Tab.0.center" timestamp="1610055929341">
+    <state width="1876" height="290" key="GridCell.Tab.0.bottom/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610056731556" />
+    <state width="1876" height="290" key="GridCell.Tab.0.center" timestamp="1610056731555">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.0.center/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929341" />
-    <state width="1876" height="290" key="GridCell.Tab.0.left" timestamp="1610055929341">
+    <state width="1876" height="290" key="GridCell.Tab.0.center/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610056731555" />
+    <state width="1876" height="290" key="GridCell.Tab.0.left" timestamp="1610056731555">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.0.left/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929341" />
-    <state width="1876" height="290" key="GridCell.Tab.0.right" timestamp="1610055929342">
+    <state width="1876" height="290" key="GridCell.Tab.0.left/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610056731555" />
+    <state width="1876" height="290" key="GridCell.Tab.0.right" timestamp="1610056731556">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.0.right/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929342" />
-    <state width="1876" height="290" key="GridCell.Tab.1.bottom" timestamp="1610055929343">
+    <state width="1876" height="290" key="GridCell.Tab.0.right/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610056731556" />
+    <state width="1876" height="290" key="GridCell.Tab.1.bottom" timestamp="1610056731557">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.1.bottom/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929343" />
-    <state width="1876" height="290" key="GridCell.Tab.1.center" timestamp="1610055929342">
+    <state width="1876" height="290" key="GridCell.Tab.1.bottom/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610056731557" />
+    <state width="1876" height="290" key="GridCell.Tab.1.center" timestamp="1610056731556">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.1.center/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929342" />
-    <state width="1876" height="290" key="GridCell.Tab.1.left" timestamp="1610055929342">
+    <state width="1876" height="290" key="GridCell.Tab.1.center/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610056731556" />
+    <state width="1876" height="290" key="GridCell.Tab.1.left" timestamp="1610056731556">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.1.left/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929342" />
-    <state width="1876" height="290" key="GridCell.Tab.1.right" timestamp="1610055929343">
+    <state width="1876" height="290" key="GridCell.Tab.1.left/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610056731556" />
+    <state width="1876" height="290" key="GridCell.Tab.1.right" timestamp="1610056731557">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1876" height="290" key="GridCell.Tab.1.right/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610055929343" />
+    <state width="1876" height="290" key="GridCell.Tab.1.right/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610056731557" />
     <state x="461" y="198" key="SettingsEditor" timestamp="1609185606383">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="461" y="198" key="SettingsEditor/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1609185606383" />
-    <state x="560" y="291" key="Vcs.Push.Dialog.v2" timestamp="1609706350298">
+    <state x="560" y="291" key="Vcs.Push.Dialog.v2" timestamp="1610056645245">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="560" y="291" key="Vcs.Push.Dialog.v2/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1609706350298" />
+    <state x="560" y="291" key="Vcs.Push.Dialog.v2/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610056645245" />
     <state x="670" y="367" key="com.android.tools.idea.run.deployment.ModifyDeviceSetDialog" timestamp="1609705565277">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>

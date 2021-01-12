@@ -90,6 +90,9 @@
     <string name="_00_00_00_min">00:00:00 Min</string>
     <string name="logo_mio">logo_mio</string>
     <string name="logo">Logo</string>
+    <!--TILE-->
+    <string name="tile_name">Cambiar Tipo de Red</string>
+    <string name="tile_disconected">Desconectado</string>
 
 
 </resources>

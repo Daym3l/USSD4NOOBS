@@ -6,8 +6,8 @@ android {
         applicationId "dev.mad.ussd4etecsa"
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 281
-        versionName "2.8.1"
+        versionCode 290
+        versionName "2.9.0"
 
     }
     lintOptions {
