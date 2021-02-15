@@ -22,7 +22,7 @@ public class Saldo implements ISaldo {
     @Override
     public void UpdateSaldo(List<String> valores) {
         try {
-            this.model.updateSaldo(valores.get(1).replace(',', ' '), valores.get(7), "SALDO", this.context);
+            this.model.updateSaldo(valores.get(1).replace(',', ' '), valores.get(6), "SALDO", this.context);
         } catch (SQLException e) {
             Log.e("ERROR SALDO", e.toString());
         }
