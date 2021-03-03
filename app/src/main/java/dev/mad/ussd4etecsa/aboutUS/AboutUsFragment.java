@@ -6,14 +6,18 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import dev.mad.ussd4etecsa.BuildConfig;
@@ -40,6 +44,13 @@ public class AboutUsFragment extends Fragment {
         TextView version = (TextView) v.findViewById(R.id.tv_version_val);
         FloatingActionButton donar = (FloatingActionButton) v.findViewById(R.id.btn_donar);
         ImageView image = (ImageView) v.findViewById(R.id.iv_text_us);
+        LinearLayout llcontacto = (LinearLayout) v.findViewById(R.id.ly_email_contact);
+        llcontacto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openEmail();
+            }
+        });
         image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,7 +93,7 @@ public class AboutUsFragment extends Fragment {
         Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
         emailIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         emailIntent.setType("vnd.android.cursor.item/email");
-        emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"daym3l@nauta.cu"});
+        emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"ussd4noobs@gmail.com"});
         emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Reportando bug ");
         emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Breve explicación del error...");
         startActivity(Intent.createChooser(emailIntent, "Seleccione aplicación de correo"));

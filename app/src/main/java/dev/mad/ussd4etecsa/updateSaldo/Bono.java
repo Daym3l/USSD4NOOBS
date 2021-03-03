@@ -101,6 +101,21 @@ public class Bono implements ISaldo {
                 }
             }
         }
+        if (valores.size() == 8 && valores.get(0).equals("Bono->vence:")) {
+            String bono = valores.get(0);
+            StringTokenizer tokenizer = new StringTokenizer(bono, "->");
+            if (tokenizer.countTokens() > 1) {
+                String bonos = tokenizer.nextToken();
+                if (bonos.equals("Bono")) {
+                    String valor = Util.getResultText(valores.get(1));
+                    valor += " + " + valores.get(6) + " " + Util.getResultText(valores.get(7)) + " " + valores.get(5);
+                    valor += " + " + valores.get(3) + " MB de navegación nacional";
+                    this.model.updateSaldo(valor, Util.getResultDate(valores.get(1)), "BONO", this.context);
+
+                }
+            }
+        }
+
         if (valores.size() == 12 && valores.get(0).equals("Bono->vence:")) {
             String bono = valores.get(0);
             StringTokenizer tokenizer = new StringTokenizer(bono, "->");

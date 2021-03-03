@@ -169,7 +169,9 @@
                             </LinearLayout>
 
                         </LinearLayout>
+
                         <LinearLayout
+                            android:id="@+id/ly_email_contact"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
@@ -180,12 +182,12 @@
                                 android:id="@+id/iv_text_us"
                                 android:layout_width="42dp"
                                 android:layout_height="42dp"
-                                android:layout_alignLeft="@+id/iv_github"
-                                android:layout_alignStart="@+id/iv_github"
                                 android:layout_below="@+id/iv_github"
+                                android:layout_alignStart="@+id/iv_github"
+                                android:layout_alignLeft="@+id/iv_github"
                                 android:layout_marginLeft="8dp"
-                                android:layout_marginRight="8dp"
                                 android:layout_marginTop="8dp"
+                                android:layout_marginRight="8dp"
                                 app:srcCompat="@drawable/ic_account" />
 
                             <LinearLayout
@@ -198,8 +200,8 @@
                                     android:layout_height="wrap_content"
 
                                     android:layout_marginLeft="4dp"
-                                    android:layout_marginRight="8dp"
                                     android:layout_marginTop="8dp"
+                                    android:layout_marginRight="8dp"
                                     android:fontFamily="sans-serif-condensed"
                                     android:text="@string/about_us_contactenos"
                                     android:textColor="@color/primary_text" />
