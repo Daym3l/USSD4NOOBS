@@ -149,7 +149,7 @@ public class Nav_Principal extends AppCompatActivity
         bono = (TextView) findViewById(R.id.tv_bono_saldo);
 
         scrollView = (ScrollView) findViewById(R.id.sv_contenedor);
-        venceBono = (TextView) findViewById(R.id.tv_bono_vence);
+
         tv_voz = (TextView) findViewById(R.id.tv_voz_vaue);
         tv_vozVence = (TextView) findViewById(R.id.tv_vtime_val);
 
@@ -782,15 +782,15 @@ public class Nav_Principal extends AppCompatActivity
 
             // Servicio de Bono
             if (ussdObjetctBono.get(0).getValor().equals("00:00:00") || ussdObjetctBono.get(0).getValor().equals("0.00")) {
-                bono.setText('$' + ussdObjetctBono.get(0).getValor() + " MIN");
-                venceBono.setText(ussdObjetctBono.get(0).getFechavencimiento());
+                bono.setText(ussdObjetctBono.get(0).getValor() + " MIN");
+
                 tv_activo_Bono.setText("Sin Bonificación.");
                 tv_activo_Bono.setTextColor(getResources().getColor(R.color.rojo));
             } else {
                 String valores = ussdObjetctBono.get(0).getValor();
-                bono.setText('$' + valores);
+                bono.setText(valores);
                 tv_activo_Bono.setText("Bono activo");
-                venceBono.setText(ussdObjetctBono.get(0).getFechavencimiento());
+
                 tv_activo_Bono.setTextColor(getResources().getColor(R.color.verde));
             }
 
