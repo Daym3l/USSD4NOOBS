@@ -36,10 +36,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d73bb81-f107-4212-a218-42d2b84719ab" name="Default" comment="v2.9.3&#10;- bug bono fixed&#10;- firma par dispositivos con android 11">
+    <list default="true" id="3d73bb81-f107-4212-a218-42d2b84719ab" name="Default" comment="v2.9.4&#10;- mejoras mensaje del bono;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/Nav_Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/Nav_Principal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/updateSaldo/Bono.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/updateSaldo/Bono.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" afterDir="false" />
     </list>
@@ -51,7 +50,7 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_2_API_30]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[a31b6c42]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -345,13 +344,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493144481964</updated>
-    </task>
-    <task id="LOCAL-00014" summary="v 2.0.2">
-      <created>1511882106803</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1511882106803</updated>
     </task>
     <task id="LOCAL-00015" summary="v 2.0.3">
       <created>1511882278192</created>
@@ -689,7 +681,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614813241030</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="v2.9.4&#10;- mejoras mensaje del bono;">
+      <created>1615309350923</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1615309350923</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TodoView">
@@ -735,7 +734,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="v 2.1.3" />
     <MESSAGE value="+IU&#10;+Bug" />
     <MESSAGE value="v2.1.4" />
     <MESSAGE value="bugs vpn" />
@@ -760,7 +758,8 @@
     <MESSAGE value="- 2.9.0 se añade ajuste para el cambio de tipo de red" />
     <MESSAGE value="v2.9.2&#10;- bug fix vencimiento de saldo&#10;- firma par dispositivos con android 11" />
     <MESSAGE value="v2.9.3&#10;- bug bono fixed&#10;- firma par dispositivos con android 11" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.9.3&#10;- bug bono fixed&#10;- firma par dispositivos con android 11" />
+    <MESSAGE value="v2.9.4&#10;- mejoras mensaje del bono;" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.9.4&#10;- mejoras mensaje del bono;" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -785,30 +784,30 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="449" height="466" key="DebuggerActiveHint/1920.0.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1613426890740" />
-    <state width="1876" height="287" key="GridCell.Tab.0.bottom" timestamp="1615308337817">
+    <state width="1876" height="287" key="GridCell.Tab.0.bottom" timestamp="1615391619240">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1876" height="548" key="GridCell.Tab.0.bottom/1920.0.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1614811471741" />
     <state width="1876" height="290" key="GridCell.Tab.0.bottom/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610056731556" />
-    <state width="1876" height="287" key="GridCell.Tab.0.bottom/1920.25.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1615308337817" />
-    <state width="1876" height="287" key="GridCell.Tab.0.center" timestamp="1615308337816">
+    <state width="1876" height="287" key="GridCell.Tab.0.bottom/1920.25.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1615391619240" />
+    <state width="1876" height="287" key="GridCell.Tab.0.center" timestamp="1615391619240">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1876" height="548" key="GridCell.Tab.0.center/1920.0.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1614811471739" />
     <state width="1876" height="290" key="GridCell.Tab.0.center/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610056731555" />
-    <state width="1876" height="287" key="GridCell.Tab.0.center/1920.25.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1615308337816" />
-    <state width="1876" height="287" key="GridCell.Tab.0.left" timestamp="1615308337816">
+    <state width="1876" height="287" key="GridCell.Tab.0.center/1920.25.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1615391619240" />
+    <state width="1876" height="287" key="GridCell.Tab.0.left" timestamp="1615391619239">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1876" height="548" key="GridCell.Tab.0.left/1920.0.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1614811471738" />
     <state width="1876" height="290" key="GridCell.Tab.0.left/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610056731555" />
-    <state width="1876" height="287" key="GridCell.Tab.0.left/1920.25.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1615308337816" />
-    <state width="1876" height="287" key="GridCell.Tab.0.right" timestamp="1615308337816">
+    <state width="1876" height="287" key="GridCell.Tab.0.left/1920.25.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1615391619239" />
+    <state width="1876" height="287" key="GridCell.Tab.0.right" timestamp="1615391619240">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1876" height="548" key="GridCell.Tab.0.right/1920.0.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1614811471740" />
     <state width="1876" height="290" key="GridCell.Tab.0.right/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1610056731556" />
-    <state width="1876" height="287" key="GridCell.Tab.0.right/1920.25.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1615308337816" />
+    <state width="1876" height="287" key="GridCell.Tab.0.right/1920.25.1440.875/0.25.1920.1055@0.25.1920.1055" timestamp="1615391619240" />
     <state width="1876" height="290" key="GridCell.Tab.1.bottom" timestamp="1610056731557">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -848,6 +847,15 @@
     <state x="626" y="256" width="670" height="675" key="run.anything.popup/1920.23.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1609183884446" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/dev/mad/ussd4etecsa/updateSaldo/Datos.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
         <watch expression="this" />

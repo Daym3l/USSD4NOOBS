@@ -35,7 +35,7 @@ public class Bono implements ISaldo {
             String result = valor.replaceAll("->", " vence: ");
             this.model.updateSaldo(result, Util.getResultDate(valores.get(valores.size() - 1)), "BONO", this.context);
         } else {
-            this.model.updateSaldo("Error al procesar el bono.", "00-00-0000", "BONO", this.context);
+            this.model.updateSaldo("0.00", "00-00-0000", "BONO", this.context);
         }
 
 
